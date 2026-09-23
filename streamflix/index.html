@@ -98,172 +98,208 @@
       </div>
     </section>
 
-    <section class="rangee" aria-labelledby="titre-tendances">
-      <h2 id="titre-tendances">Tendances actuelles</h2>
-      <ul class="grille-films">
-        <li>
-          <article class="carte-film">
-            <img src="images/films/dark-knight.jpg" alt="Affiche du film The Dark Knight" loading="lazy">
-            <h3>The Dark Knight</h3>
-            <dl class="infos-film">
-              <dt>Année</dt>
-              <dd><time datetime="2008">2008</time></dd>
-              <dt>Note</dt>
-              <dd>4.8/5</dd>
-              <dt>Durée</dt>
-              <dd><time datetime="PT2H32M">2h32</time></dd>
-              <dt>Genres</dt>
-              <dd>Action, Crime, Drama</dd>
-            </dl>
-            <a href="films/dark-knight.html" class="lien-film">Voir le film<span class="visually-hidden"> The Dark Knight</span></a>
+    <section class="rangee container-fluid px-3 px-lg-5 py-4" aria-labelledby="titre-tendances">
+      <h2 id="titre-tendances" class="h3 mb-3">Tendances actuelles</h2>
+      <ul class="grille-films row g-4 list-unstyled">
+        <li class="col-12 col-sm-6 col-lg-4">
+          <article class="card carte-film h-100">
+            <img src="images/films/dark-knight.jpg" alt="Affiche du film The Dark Knight" class="card-img-top" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title h5">The Dark Knight</h3>
+              <dl class="infos-film">
+                <dt>Année</dt>
+                <dd><time datetime="2008">2008</time></dd>
+                <dt>Note</dt>
+                <dd>4.8/5</dd>
+                <dt>Durée</dt>
+                <dd><time datetime="PT2H32M">2h32</time></dd>
+                <dt>Genres</dt>
+                <dd><span class="badge text-bg-secondary">Action</span> <span class="badge text-bg-secondary">Crime</span> <span class="badge text-bg-secondary">Drama</span></dd>
+              </dl>
+            </div>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+              <a href="films/dark-knight.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> The Dark Knight</span></a>
+            </div>
           </article>
         </li>
-        <li>
-          <article class="carte-film">
-            <img src="images/films/interstellar.jpg" alt="Affiche du film Interstellar" loading="lazy">
-            <h3>Interstellar</h3>
-            <dl class="infos-film">
-              <dt>Année</dt>
-              <dd><time datetime="2014">2014</time></dd>
-              <dt>Note</dt>
-              <dd>4.7/5</dd>
-              <dt>Durée</dt>
-              <dd><time datetime="PT2H49M">2h49</time></dd>
-              <dt>Genres</dt>
-              <dd>Sci-Fi, Drama</dd>
-            </dl>
-            <a href="films/interstellar.html" class="lien-film">Voir le film<span class="visually-hidden"> Interstellar</span></a>
+        <li class="col-12 col-sm-6 col-lg-4">
+          <article class="card carte-film h-100">
+            <img src="images/films/interstellar.jpg" alt="Affiche du film Interstellar" class="card-img-top" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title h5">Interstellar</h3>
+              <dl class="infos-film">
+                <dt>Année</dt>
+                <dd><time datetime="2014">2014</time></dd>
+                <dt>Note</dt>
+                <dd>4.7/5</dd>
+                <dt>Durée</dt>
+                <dd><time datetime="PT2H49M">2h49</time></dd>
+                <dt>Genres</dt>
+                <dd><span class="badge text-bg-secondary">Sci-Fi</span> <span class="badge text-bg-secondary">Drama</span></dd>
+              </dl>
+            </div>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+              <a href="films/interstellar.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> Interstellar</span></a>
+            </div>
           </article>
         </li>
-        <li>
-          <article class="carte-film">
-            <img src="images/films/pulp-fiction.jpg" alt="Affiche du film Pulp Fiction" loading="lazy">
-            <h3>Pulp Fiction</h3>
-            <dl class="infos-film">
-              <dt>Année</dt>
-              <dd><time datetime="1994">1994</time></dd>
-              <dt>Note</dt>
-              <dd>4.6/5</dd>
-              <dt>Durée</dt>
-              <dd><time datetime="PT2H34M">2h34</time></dd>
-              <dt>Genres</dt>
-              <dd>Crime, Drama</dd>
-            </dl>
-            <a href="films/pulp-fiction.html" class="lien-film">Voir le film<span class="visually-hidden"> Pulp Fiction</span></a>
-          </article>
-        </li>
-      </ul>
-    </section>
-
-    <section class="rangee" aria-labelledby="titre-recommandes">
-      <h2 id="titre-recommandes">Recommandés pour vous</h2>
-      <ul class="grille-films">
-        <li>
-          <article class="carte-film">
-            <img src="images/films/inception.jpg" alt="Affiche du film Inception" loading="lazy">
-            <h3>Inception</h3>
-            <dl class="infos-film">
-              <dt>Année</dt>
-              <dd><time datetime="2010">2010</time></dd>
-              <dt>Note</dt>
-              <dd>4.5/5</dd>
-              <dt>Durée</dt>
-              <dd><time datetime="PT2H28M">2h28</time></dd>
-              <dt>Genres</dt>
-              <dd>Sci-Fi, Thriller</dd>
-            </dl>
-            <a href="films/inception.html" class="lien-film">Voir le film<span class="visually-hidden"> Inception</span></a>
-          </article>
-        </li>
-        <li>
-          <article class="carte-film">
-            <img src="images/films/matrix.jpg" alt="Affiche du film The Matrix" loading="lazy">
-            <h3>The Matrix</h3>
-            <dl class="infos-film">
-              <dt>Année</dt>
-              <dd><time datetime="1999">1999</time></dd>
-              <dt>Note</dt>
-              <dd>4.5/5</dd>
-              <dt>Durée</dt>
-              <dd><time datetime="PT2H16M">2h16</time></dd>
-              <dt>Genres</dt>
-              <dd>Action, Sci-Fi</dd>
-            </dl>
-            <a href="films/matrix.html" class="lien-film">Voir le film<span class="visually-hidden"> The Matrix</span></a>
-          </article>
-        </li>
-        <li>
-          <article class="carte-film">
-            <img src="images/films/forrest-gump.jpg" alt="Affiche du film Forrest Gump" loading="lazy">
-            <h3>Forrest Gump</h3>
-            <dl class="infos-film">
-              <dt>Année</dt>
-              <dd><time datetime="1994">1994</time></dd>
-              <dt>Note</dt>
-              <dd>4.4/5</dd>
-              <dt>Durée</dt>
-              <dd><time datetime="PT2H22M">2h22</time></dd>
-              <dt>Genres</dt>
-              <dd>Drama, Romance</dd>
-            </dl>
-            <a href="films/forrest-gump.html" class="lien-film">Voir le film<span class="visually-hidden"> Forrest Gump</span></a>
+        <li class="col-12 col-sm-6 col-lg-4">
+          <article class="card carte-film h-100">
+            <img src="images/films/pulp-fiction.jpg" alt="Affiche du film Pulp Fiction" class="card-img-top" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title h5">Pulp Fiction</h3>
+              <dl class="infos-film">
+                <dt>Année</dt>
+                <dd><time datetime="1994">1994</time></dd>
+                <dt>Note</dt>
+                <dd>4.6/5</dd>
+                <dt>Durée</dt>
+                <dd><time datetime="PT2H34M">2h34</time></dd>
+                <dt>Genres</dt>
+                <dd><span class="badge text-bg-secondary">Crime</span> <span class="badge text-bg-secondary">Drama</span></dd>
+              </dl>
+            </div>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+              <a href="films/pulp-fiction.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> Pulp Fiction</span></a>
+            </div>
           </article>
         </li>
       </ul>
     </section>
 
-    <section class="rangee" aria-labelledby="titre-nouveautes">
-      <h2 id="titre-nouveautes">Nouveautés</h2>
-      <ul class="grille-films">
-        <li>
-          <article class="carte-film">
-            <img src="images/films/interstellar.jpg" alt="Affiche du film Interstellar" loading="lazy">
-            <h3>Interstellar</h3>
-            <dl class="infos-film">
-              <dt>Année</dt>
-              <dd><time datetime="2014">2014</time></dd>
-              <dt>Note</dt>
-              <dd>4.7/5</dd>
-              <dt>Durée</dt>
-              <dd><time datetime="PT2H49M">2h49</time></dd>
-              <dt>Genres</dt>
-              <dd>Sci-Fi, Drama</dd>
-            </dl>
-            <a href="films/interstellar.html" class="lien-film">Voir le film<span class="visually-hidden"> Interstellar</span></a>
+    <section class="rangee container-fluid px-3 px-lg-5 py-4" aria-labelledby="titre-recommandes">
+      <h2 id="titre-recommandes" class="h3 mb-3">Recommandés pour vous</h2>
+      <ul class="grille-films row g-4 list-unstyled">
+        <li class="col-12 col-sm-6 col-lg-4">
+          <article class="card carte-film h-100">
+            <img src="images/films/inception.jpg" alt="Affiche du film Inception" class="card-img-top" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title h5">Inception</h3>
+              <dl class="infos-film">
+                <dt>Année</dt>
+                <dd><time datetime="2010">2010</time></dd>
+                <dt>Note</dt>
+                <dd>4.5/5</dd>
+                <dt>Durée</dt>
+                <dd><time datetime="PT2H28M">2h28</time></dd>
+                <dt>Genres</dt>
+                <dd><span class="badge text-bg-secondary">Sci-Fi</span> <span class="badge text-bg-secondary">Thriller</span></dd>
+              </dl>
+            </div>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+              <a href="films/inception.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> Inception</span></a>
+            </div>
           </article>
         </li>
-        <li>
-          <article class="carte-film">
-            <img src="images/films/dark-knight.jpg" alt="Affiche du film The Dark Knight" loading="lazy">
-            <h3>The Dark Knight</h3>
-            <dl class="infos-film">
-              <dt>Année</dt>
-              <dd><time datetime="2008">2008</time></dd>
-              <dt>Note</dt>
-              <dd>4.8/5</dd>
-              <dt>Durée</dt>
-              <dd><time datetime="PT2H32M">2h32</time></dd>
-              <dt>Genres</dt>
-              <dd>Action, Crime, Drama</dd>
-            </dl>
-            <a href="films/dark-knight.html" class="lien-film">Voir le film<span class="visually-hidden"> The Dark Knight</span></a>
+        <li class="col-12 col-sm-6 col-lg-4">
+          <article class="card carte-film h-100">
+            <img src="images/films/matrix.jpg" alt="Affiche du film The Matrix" class="card-img-top" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title h5">The Matrix</h3>
+              <dl class="infos-film">
+                <dt>Année</dt>
+                <dd><time datetime="1999">1999</time></dd>
+                <dt>Note</dt>
+                <dd>4.5/5</dd>
+                <dt>Durée</dt>
+                <dd><time datetime="PT2H16M">2h16</time></dd>
+                <dt>Genres</dt>
+                <dd><span class="badge text-bg-secondary">Action</span> <span class="badge text-bg-secondary">Sci-Fi</span></dd>
+              </dl>
+            </div>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+              <a href="films/matrix.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> The Matrix</span></a>
+            </div>
           </article>
         </li>
-        <li>
-          <article class="carte-film">
-            <img src="images/films/inception.jpg" alt="Affiche du film Inception" loading="lazy">
-            <h3>Inception</h3>
-            <dl class="infos-film">
-              <dt>Année</dt>
-              <dd><time datetime="2010">2010</time></dd>
-              <dt>Note</dt>
-              <dd>4.5/5</dd>
-              <dt>Durée</dt>
-              <dd><time datetime="PT2H28M">2h28</time></dd>
-              <dt>Genres</dt>
-              <dd>Sci-Fi, Thriller</dd>
-            </dl>
-            <a href="films/inception.html" class="lien-film">Voir le film<span class="visually-hidden"> Inception</span></a>
+        <li class="col-12 col-sm-6 col-lg-4">
+          <article class="card carte-film h-100">
+            <img src="images/films/forrest-gump.jpg" alt="Affiche du film Forrest Gump" class="card-img-top" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title h5">Forrest Gump</h3>
+              <dl class="infos-film">
+                <dt>Année</dt>
+                <dd><time datetime="1994">1994</time></dd>
+                <dt>Note</dt>
+                <dd>4.4/5</dd>
+                <dt>Durée</dt>
+                <dd><time datetime="PT2H22M">2h22</time></dd>
+                <dt>Genres</dt>
+                <dd><span class="badge text-bg-secondary">Drama</span> <span class="badge text-bg-secondary">Romance</span></dd>
+              </dl>
+            </div>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+              <a href="films/forrest-gump.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> Forrest Gump</span></a>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section class="rangee container-fluid px-3 px-lg-5 py-4" aria-labelledby="titre-nouveautes">
+      <h2 id="titre-nouveautes" class="h3 mb-3">Nouveautés</h2>
+      <ul class="grille-films row g-4 list-unstyled">
+        <li class="col-12 col-sm-6 col-lg-4">
+          <article class="card carte-film h-100">
+            <img src="images/films/interstellar.jpg" alt="Affiche du film Interstellar" class="card-img-top" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title h5">Interstellar</h3>
+              <dl class="infos-film">
+                <dt>Année</dt>
+                <dd><time datetime="2014">2014</time></dd>
+                <dt>Note</dt>
+                <dd>4.7/5</dd>
+                <dt>Durée</dt>
+                <dd><time datetime="PT2H49M">2h49</time></dd>
+                <dt>Genres</dt>
+                <dd><span class="badge text-bg-secondary">Sci-Fi</span> <span class="badge text-bg-secondary">Drama</span></dd>
+              </dl>
+            </div>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+              <a href="films/interstellar.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> Interstellar</span></a>
+            </div>
+          </article>
+        </li>
+        <li class="col-12 col-sm-6 col-lg-4">
+          <article class="card carte-film h-100">
+            <img src="images/films/dark-knight.jpg" alt="Affiche du film The Dark Knight" class="card-img-top" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title h5">The Dark Knight</h3>
+              <dl class="infos-film">
+                <dt>Année</dt>
+                <dd><time datetime="2008">2008</time></dd>
+                <dt>Note</dt>
+                <dd>4.8/5</dd>
+                <dt>Durée</dt>
+                <dd><time datetime="PT2H32M">2h32</time></dd>
+                <dt>Genres</dt>
+                <dd><span class="badge text-bg-secondary">Action</span> <span class="badge text-bg-secondary">Crime</span> <span class="badge text-bg-secondary">Drama</span></dd>
+              </dl>
+            </div>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+              <a href="films/dark-knight.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> The Dark Knight</span></a>
+            </div>
+          </article>
+        </li>
+        <li class="col-12 col-sm-6 col-lg-4">
+          <article class="card carte-film h-100">
+            <img src="images/films/inception.jpg" alt="Affiche du film Inception" class="card-img-top" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title h5">Inception</h3>
+              <dl class="infos-film">
+                <dt>Année</dt>
+                <dd><time datetime="2010">2010</time></dd>
+                <dt>Note</dt>
+                <dd>4.5/5</dd>
+                <dt>Durée</dt>
+                <dd><time datetime="PT2H28M">2h28</time></dd>
+                <dt>Genres</dt>
+                <dd><span class="badge text-bg-secondary">Sci-Fi</span> <span class="badge text-bg-secondary">Thriller</span></dd>
+              </dl>
+            </div>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+              <a href="films/inception.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> Inception</span></a>
+            </div>
           </article>
         </li>
       </ul>
