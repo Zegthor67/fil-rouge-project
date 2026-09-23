@@ -90,8 +90,8 @@
 
             <div class="hero-actions d-flex flex-wrap gap-2">
               <button type="button" class="btn btn-light btn-lg">Lecture</button>
-              <a href="films/inception.html" class="btn btn-secondary btn-lg">Plus d'infos<span class="visually-hidden"> sur Inception</span></a>
-              <button type="button" class="btn btn-outline-light btn-lg" aria-pressed="false">Ma Liste</button>
+              <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#modal-inception">Plus d'infos<span class="visually-hidden"> sur Inception</span></button>
+              <button type="button" class="btn btn-outline-light btn-lg btn-ma-liste" aria-pressed="false" data-bs-toggle="tooltip" data-bs-title="Ajouter Inception à ma liste">Ma Liste</button>
             </div>
           </div>
         </div>
@@ -410,5 +410,32 @@
       <p class="copyright text-center text-body-secondary border-top pt-4 mt-4 mb-0"><small>&copy; 2026 StreamFlix. Tous droits réservés. Projet réalisé dans le cadre d'une formation, les liens vers les réseaux sociaux sont factices.</small></p>
     </div>
   </footer>
+
+  <div class="modal fade" id="modal-inception" tabindex="-1" role="dialog" aria-labelledby="modal-inception-titre">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h4" id="modal-inception-titre">Inception</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-3">
+            <span class="badge text-bg-secondary">Sci-Fi</span>
+            <span class="badge text-bg-secondary">Thriller</span>
+          </p>
+          <p>Un voleur qui s'infiltre dans les rêves des autres pour voler leurs secrets découvre qu'il doit réaliser l'impossible : planter une idée plutôt que de la voler.</p>
+          <ul class="list-inline text-body-secondary mb-0">
+            <li class="list-inline-item">Sortie en <time datetime="2010">2010</time></li>
+            <li class="list-inline-item">Durée : <time datetime="PT2H28M">2h28</time></li>
+            <li class="list-inline-item">Note : 4.5/5</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary">Lecture</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
