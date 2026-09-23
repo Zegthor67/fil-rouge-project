@@ -305,66 +305,73 @@
       </ul>
     </section>
 
-    <section class="inscription" aria-labelledby="titre-inscription">
-      <h2 id="titre-inscription">Inscription</h2>
-      <p>Créez votre compte pour profiter de StreamFlix. Les champs marqués d'un astérisque (*) sont obligatoires.</p>
+    <section class="inscription container-fluid px-3 px-lg-5 py-5" aria-labelledby="titre-inscription">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+          <h2 id="titre-inscription" class="h3 mb-2">Inscription</h2>
+          <p class="text-body-secondary mb-4">Créez votre compte pour profiter de StreamFlix. Les champs marqués d'un astérisque (*) sont obligatoires.</p>
 
-      <form action="inscription.html" method="post">
-        <div class="champ">
-          <label for="prenom">Prénom *</label>
-          <input type="text" id="prenom" name="prenom" autocomplete="given-name" minlength="2" maxlength="50" required>
+          <form class="row g-3" action="inscription.html" method="post">
+            <div class="col-md-6">
+              <label for="prenom" class="form-label">Prénom *</label>
+              <input type="text" class="form-control" id="prenom" name="prenom" autocomplete="given-name" minlength="2" maxlength="50" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="nom" class="form-label">Nom *</label>
+              <input type="text" class="form-control" id="nom" name="nom" autocomplete="family-name" minlength="2" maxlength="50" required>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Adresse e-mail *</label>
+              <input type="email" class="form-control" id="email" name="email" autocomplete="email" aria-describedby="aide-email" required>
+              <p id="aide-email" class="form-text mb-0">Exemple : prenom.nom@exemple.fr</p>
+            </div>
+
+            <div class="col-md-6">
+              <label for="mot-de-passe" class="form-label">Mot de passe *</label>
+              <input type="password" class="form-control" id="mot-de-passe" name="mot_de_passe" autocomplete="new-password" minlength="8" pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}" aria-describedby="aide-mdp" required>
+              <p id="aide-mdp" class="form-text mb-0">8 caractères minimum, dont au moins une majuscule et un chiffre.</p>
+            </div>
+
+            <div class="col-md-6">
+              <label for="naissance" class="form-label">Date de naissance *</label>
+              <input type="date" class="form-control" id="naissance" name="naissance" autocomplete="bday" min="1900-01-01" max="2010-12-31" required>
+            </div>
+
+            <fieldset class="col-12">
+              <legend class="form-label fs-6">Choisissez votre formule *</legend>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="formule-essentiel" name="formule" value="essentiel" required>
+                <label for="formule-essentiel" class="form-check-label">Essentiel : 7,99 € par mois</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="formule-standard" name="formule" value="standard">
+                <label for="formule-standard" class="form-check-label">Standard : 12,99 € par mois</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="formule-premium" name="formule" value="premium">
+                <label for="formule-premium" class="form-check-label">Premium : 17,99 € par mois</label>
+              </div>
+            </fieldset>
+
+            <div class="col-12">
+              <div class="form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter" value="oui" role="switch">
+                <label for="newsletter" class="form-check-label">Je souhaite recevoir la newsletter</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="cgu" name="cgu" value="accepte" required>
+                <label for="cgu" class="form-check-label">J'accepte les <a href="conditions.html">conditions d'utilisation</a> *</label>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary btn-lg w-100">Créer mon compte</button>
+            </div>
+          </form>
         </div>
-
-        <div class="champ">
-          <label for="nom">Nom *</label>
-          <input type="text" id="nom" name="nom" autocomplete="family-name" minlength="2" maxlength="50" required>
-        </div>
-
-        <div class="champ">
-          <label for="email">Adresse e-mail *</label>
-          <input type="email" id="email" name="email" autocomplete="email" aria-describedby="aide-email" required>
-          <p id="aide-email" class="aide">Exemple : prenom.nom@exemple.fr</p>
-        </div>
-
-        <div class="champ">
-          <label for="mot-de-passe">Mot de passe *</label>
-          <input type="password" id="mot-de-passe" name="mot_de_passe" autocomplete="new-password" minlength="8" pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}" aria-describedby="aide-mdp" required>
-          <p id="aide-mdp" class="aide">8 caractères minimum, dont au moins une majuscule et un chiffre.</p>
-        </div>
-
-        <div class="champ">
-          <label for="naissance">Date de naissance *</label>
-          <input type="date" id="naissance" name="naissance" autocomplete="bday" min="1900-01-01" max="2010-12-31" required>
-        </div>
-
-        <fieldset>
-          <legend>Choisissez votre formule *</legend>
-          <div class="choix">
-            <input type="radio" id="formule-essentiel" name="formule" value="essentiel" required>
-            <label for="formule-essentiel">Essentiel : 7,99 € par mois</label>
-          </div>
-          <div class="choix">
-            <input type="radio" id="formule-standard" name="formule" value="standard">
-            <label for="formule-standard">Standard : 12,99 € par mois</label>
-          </div>
-          <div class="choix">
-            <input type="radio" id="formule-premium" name="formule" value="premium">
-            <label for="formule-premium">Premium : 17,99 € par mois</label>
-          </div>
-        </fieldset>
-
-        <div class="choix">
-          <input type="checkbox" id="newsletter" name="newsletter" value="oui">
-          <label for="newsletter">Je souhaite recevoir la newsletter</label>
-        </div>
-
-        <div class="choix">
-          <input type="checkbox" id="cgu" name="cgu" value="accepte" required>
-          <label for="cgu">J'accepte les <a href="conditions.html">conditions d'utilisation</a> *</label>
-        </div>
-
-        <button type="submit" class="bouton">Créer mon compte</button>
-      </form>
+      </div>
     </section>
   </main>
 
