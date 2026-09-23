@@ -1,0 +1,43 @@
+// ==========================================
+// Header
+// ==========================================
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.entete {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background-color: rgba($background-dark, 0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba($text-light, 0.05);
+
+  .navbar {
+    padding-top: $spacing-unit * 0.75;
+    padding-bottom: $spacing-unit * 0.75;
+  }
+
+  .logo img {
+    height: 32px;
+    width: auto;
+
+    @include respond-to('lg') {
+      height: 40px;
+    }
+  }
+
+  .recherche .form-control {
+    background-color: rgba($primary-dark, 0.8);
+    border-color: $secondary-gray;
+    color: $text-light;
+
+    &::placeholder {
+      color: $text-muted;
+    }
+
+    @include respond-to('lg') {
+      width: 200px;
+    }
+  }
+}

@@ -148,4 +148,114 @@ a:focus-visible {
   border-radius: 6px;
 }
 
+.entete {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background-color: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.entete .navbar {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.entete .logo img {
+  height: 32px;
+  width: auto;
+}
+@media (min-width: 992px) {
+  .entete .logo img {
+    height: 40px;
+  }
+}
+.entete .recherche .form-control {
+  background-color: rgba(34, 31, 31, 0.8);
+  border-color: #564d4d;
+  color: #ffffff;
+}
+.entete .recherche .form-control::placeholder {
+  color: #999999;
+}
+@media (min-width: 992px) {
+  .entete .recherche .form-control {
+    width: 200px;
+  }
+}
+
+.hero {
+  min-height: 480px;
+  overflow: hidden;
+  background-color: #221f1f;
+}
+@media (min-width: 768px) {
+  .hero {
+    min-height: 80vh;
+  }
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #141414 0%, rgba(20, 20, 20, 0.5) 50%, rgba(20, 20, 20, 0) 100%);
+}
+.hero-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(20, 20, 20, 0.8) 0%, rgba(20, 20, 20, 0.4) 50%, rgba(20, 20, 20, 0) 100%);
+}
+
+.hero-contenu {
+  position: relative;
+  z-index: 1;
+  padding-top: 6rem;
+}
+
+.hero-etiquette {
+  color: #e50914;
+  letter-spacing: 0.15em;
+  font-size: 14px;
+}
+
+.hero-description {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.pied-de-page {
+  background-color: #221f1f;
+  color: #999999;
+  font-size: 14px;
+}
+.pied-de-page h2 {
+  color: #ffffff;
+  letter-spacing: 0.08em;
+}
+.pied-de-page a {
+  color: #999999;
+  text-decoration: none;
+}
+.pied-de-page a:hover, .pied-de-page a:focus-visible {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.pied-de-page address {
+  font-style: normal;
+  line-height: 1.8;
+}
+
 /*# sourceMappingURL=style.css.map */

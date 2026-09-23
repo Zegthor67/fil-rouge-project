@@ -11,5 +11,9 @@
 @use 'base/typography';
 
 // 3. Layout : grandes zones de la page
+@use 'layout/header';
+@use 'layout/hero';
+@use 'layout/footer';
+
 // 4. Components : éléments réutilisables
 // 5. Pages : styles propres à une page

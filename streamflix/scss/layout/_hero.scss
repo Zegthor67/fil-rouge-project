@@ -1,0 +1,51 @@
+// ==========================================
+// Section hero (film à la une)
+// ==========================================
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.hero {
+  min-height: $hero-min-height;
+  overflow: hidden;
+  background-color: $primary-dark;
+
+  @include respond-to('md') {
+    min-height: $hero-height;
+  }
+}
+
+.hero-image {
+  @include cover-parent;
+  object-fit: cover;
+  object-position: center top;
+}
+
+// Deux dégradés : un par le bas et un par la gauche, là où se trouve le texte
+.hero-overlay {
+  @include cover-parent;
+  @include overlay-gradient(to top, 1);
+
+  &::after {
+    content: '';
+    @include cover-parent;
+    @include overlay-gradient(to right, 0.8);
+  }
+}
+
+.hero-contenu {
+  position: relative;
+  z-index: 1;
+  padding-top: $spacing-unit * 6;
+}
+
+.hero-etiquette {
+  color: $primary-red;
+  letter-spacing: 0.15em;
+  font-size: $font-size-small;
+}
+
+.hero-description {
+  color: rgba($text-light, 0.9);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
