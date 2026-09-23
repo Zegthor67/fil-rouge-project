@@ -23,38 +23,45 @@
   <script src="js/script.js" defer></script>
 </head>
 <body>
-  <a href="#contenu" class="lien-evitement">Aller au contenu principal</a>
+  <a href="#contenu" class="lien-evitement visually-hidden-focusable">Aller au contenu principal</a>
 
   <header class="entete">
-    <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="StreamFlix, retour à l'accueil">
-    </a>
+    <nav class="navbar navbar-expand-lg" aria-label="Navigation principale">
+      <div class="container-fluid px-3 px-lg-5">
+        <a href="index.html" class="navbar-brand logo">
+          <img src="images/logo.png" alt="StreamFlix, retour à l'accueil" height="40">
+        </a>
 
-    <nav class="nav-principale" aria-label="Navigation principale">
-      <ul>
-        <li><a href="index.html" aria-current="page">Accueil</a></li>
-        <li><a href="films.html">Films</a></li>
-        <li><a href="series.html">Séries</a></li>
-        <li><a href="ma-liste.html">Ma Liste</a></li>
-      </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Afficher ou masquer le menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu-principal">
+          <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="films.html">Films</a></li>
+            <li class="nav-item"><a class="nav-link" href="series.html">Séries</a></li>
+            <li class="nav-item"><a class="nav-link" href="ma-liste.html">Ma Liste</a></li>
+          </ul>
+
+          <form class="recherche d-flex gap-2 mb-3 mb-lg-0 me-lg-3" role="search" action="recherche.html" method="get">
+            <label for="recherche" class="visually-hidden">Rechercher un film ou une série</label>
+            <input type="search" class="form-control form-control-sm" id="recherche" name="q" placeholder="Titre, genre..." minlength="2" required autocomplete="off">
+            <button type="submit" class="btn btn-sm btn-outline-light">Rechercher</button>
+          </form>
+
+          <div class="dropdown profil">
+            <button type="button" class="btn btn-sm btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Mon profil</button>
+            <ul class="dropdown-menu dropdown-menu-lg-end">
+              <li><a class="dropdown-item" href="compte.html">Mon compte</a></li>
+              <li><a class="dropdown-item" href="parametres.html">Paramètres</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="deconnexion.html">Se déconnecter</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </nav>
-
-    <div class="zone-utilisateur">
-      <form class="recherche" role="search" action="recherche.html" method="get">
-        <label for="recherche" class="visually-hidden">Rechercher un film ou une série</label>
-        <input type="search" id="recherche" name="q" placeholder="Titre, genre..." minlength="2" required autocomplete="off">
-        <button type="submit">Rechercher</button>
-      </form>
-
-      <nav class="profil" aria-label="Menu du profil">
-        <button type="button" class="profil-bouton" aria-expanded="false" aria-controls="menu-profil">Mon profil</button>
-        <ul id="menu-profil" hidden>
-          <li><a href="compte.html">Mon compte</a></li>
-          <li><a href="parametres.html">Paramètres</a></li>
-          <li><a href="deconnexion.html">Se déconnecter</a></li>
-        </ul>
-      </nav>
-    </div>
   </header>
 
   <main id="contenu" tabindex="-1">
