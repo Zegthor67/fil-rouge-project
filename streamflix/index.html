@@ -67,29 +67,33 @@
   <main id="contenu" tabindex="-1">
     <h1 class="visually-hidden">StreamFlix, films et séries en streaming</h1>
 
-    <section class="hero" aria-labelledby="hero-titre">
+    <section class="hero position-relative d-flex align-items-end" aria-labelledby="hero-titre">
       <img src="images/hero-bg.jpg" alt="Visuel du film Inception" class="hero-image">
       <div class="hero-overlay"></div>
 
-      <div class="hero-contenu">
-        <p class="hero-etiquette">Film à la une</p>
-        <h2 id="hero-titre">Inception</h2>
-        <dl class="infos-film">
-          <dt>Année</dt>
-          <dd><time datetime="2010">2010</time></dd>
-          <dt>Durée</dt>
-          <dd><time datetime="PT2H28M">2h28</time></dd>
-          <dt>Note</dt>
-          <dd>4.5/5</dd>
-          <dt>Genres</dt>
-          <dd>Sci-Fi, Thriller</dd>
-        </dl>
-        <p class="hero-description">Un voleur qui s'infiltre dans les rêves des autres pour voler leurs secrets découvre qu'il doit réaliser l'impossible : planter une idée plutôt que de la voler.</p>
+      <div class="hero-contenu container-fluid px-3 px-lg-5 pb-5">
+        <div class="row">
+          <div class="col-12 col-md-8 col-lg-6">
+            <p class="hero-etiquette text-uppercase fw-semibold mb-2">Film à la une</p>
+            <h2 id="hero-titre" class="display-4 fw-bold">Inception</h2>
+            <dl class="infos-film mb-3">
+              <dt>Année</dt>
+              <dd><time datetime="2010">2010</time></dd>
+              <dt>Durée</dt>
+              <dd><time datetime="PT2H28M">2h28</time></dd>
+              <dt>Note</dt>
+              <dd>4.5/5</dd>
+              <dt>Genres</dt>
+              <dd><span class="badge text-bg-secondary">Sci-Fi</span> <span class="badge text-bg-secondary">Thriller</span></dd>
+            </dl>
+            <p class="hero-description lead mb-4">Un voleur qui s'infiltre dans les rêves des autres pour voler leurs secrets découvre qu'il doit réaliser l'impossible : planter une idée plutôt que de la voler.</p>
 
-        <div class="hero-actions">
-          <button type="button" class="bouton bouton-lecture">Lecture</button>
-          <a href="films/inception.html" class="bouton bouton-infos">Plus d'infos<span class="visually-hidden"> sur Inception</span></a>
-          <button type="button" class="bouton bouton-liste" aria-pressed="false">Ma Liste</button>
+            <div class="hero-actions d-flex flex-wrap gap-2">
+              <button type="button" class="btn btn-light btn-lg">Lecture</button>
+              <a href="films/inception.html" class="btn btn-secondary btn-lg">Plus d'infos<span class="visually-hidden"> sur Inception</span></a>
+              <button type="button" class="btn btn-outline-light btn-lg" aria-pressed="false">Ma Liste</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
