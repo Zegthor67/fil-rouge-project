@@ -1,0 +1,96 @@
+// ==========================================
+// Personnalisation de Bootstrap
+// ==========================================
+// Bootstrap est chargé par le CDN dans index.html.
+// Ici on importe seulement ses fonctions, variables et mixins (depuis node_modules),
+// ce qui ne génère aucun CSS. On s'en sert pour réécrire les variables CSS
+// de Bootstrap avec les couleurs StreamFlix, sans dupliquer tout le framework.
+
+@use 'sass:meta';
+@use '../utils/variables' as sf;
+
+// 1. Variables Bootstrap personnalisées (avant l'import, grâce aux !default)
+$primary: sf.$primary-red;
+$secondary: sf.$secondary-gray;
+$dark: sf.$primary-dark;
+$info: sf.$accent-blue;
+$body-bg-dark: sf.$background-dark;
+$body-color-dark: sf.$text-light;
+$body-secondary-color-dark: sf.$text-muted;
+$font-family-sans-serif: sf.$font-primary;
+$border-radius: sf.$border-radius;
+$link-color-dark: sf.$text-light;
+$link-hover-color-dark: sf.$primary-red;
+
+// 2. Outils Bootstrap (aucune sortie CSS)
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+
+// 3. On remplace les variables CSS du CDN par les nôtres
+:root,
+[data-bs-theme='dark'] {
+  --bs-primary: #{$primary};
+  --bs-primary-rgb: #{to-rgb($primary)};
+  --bs-secondary: #{$secondary};
+  --bs-secondary-rgb: #{to-rgb($secondary)};
+  --bs-dark: #{$dark};
+  --bs-dark-rgb: #{to-rgb($dark)};
+  --bs-info: #{$info};
+  --bs-info-rgb: #{to-rgb($info)};
+
+  --bs-body-font-family: #{meta.inspect($font-family-sans-serif)};
+  --bs-body-bg: #{$body-bg-dark};
+  --bs-body-bg-rgb: #{to-rgb($body-bg-dark)};
+  --bs-body-color: #{$body-color-dark};
+  --bs-body-color-rgb: #{to-rgb($body-color-dark)};
+  --bs-secondary-color: #{$body-secondary-color-dark};
+
+  --bs-link-color: #{$link-color-dark};
+  --bs-link-color-rgb: #{to-rgb($link-color-dark)};
+  --bs-link-hover-color: #{$link-hover-color-dark};
+  --bs-link-hover-color-rgb: #{to-rgb($link-hover-color-dark)};
+
+  --bs-border-radius: #{$border-radius};
+  --bs-focus-ring-color: #{rgba($primary, 0.4)};
+}
+
+// 4. Boutons régénérés avec le mixin officiel de Bootstrap
+.btn-primary {
+  @include button-variant(
+    $primary,
+    $primary,
+    $color: sf.$text-light,
+    $hover-background: shade-color($primary, 15%),
+    $hover-border: shade-color($primary, 15%),
+    $hover-color: sf.$text-light,
+    $active-background: shade-color($primary, 25%),
+    $active-border: shade-color($primary, 25%),
+    $active-color: sf.$text-light
+  );
+}
+
+.btn-secondary {
+  @include button-variant(
+    rgba($secondary, 0.8),
+    transparent,
+    $color: sf.$text-light,
+    $hover-background: $secondary,
+    $hover-border: transparent,
+    $hover-color: sf.$text-light
+  );
+}
+
+// Champs de formulaire : focus aux couleurs StreamFlix
+.form-control:focus,
+.form-check-input:focus {
+  border-color: $primary;
+  box-shadow: 0 0 0 0.25rem rgba($primary, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: $primary;
+  border-color: $primary;
+}

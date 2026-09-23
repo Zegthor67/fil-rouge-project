@@ -1,29 +1,70 @@
-/* Styles de la plateforme : à compléter demain */
-
-/* Masque un élément à l'écran tout en le laissant lisible par les lecteurs d'écran */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+:root,
+[data-bs-theme=dark] {
+  --bs-primary: #e50914;
+  --bs-primary-rgb: 229, 9, 20;
+  --bs-secondary: #564d4d;
+  --bs-secondary-rgb: 86, 77, 77;
+  --bs-dark: #221f1f;
+  --bs-dark-rgb: 34, 31, 31;
+  --bs-info: #0071eb;
+  --bs-info-rgb: 0, 113, 235;
+  --bs-body-font-family: "Netflix Sans", "Helvetica Neue", sans-serif;
+  --bs-body-bg: #141414;
+  --bs-body-bg-rgb: 20, 20, 20;
+  --bs-body-color: #ffffff;
+  --bs-body-color-rgb: 255, 255, 255;
+  --bs-secondary-color: #999999;
+  --bs-link-color: #ffffff;
+  --bs-link-color-rgb: 255, 255, 255;
+  --bs-link-hover-color: #e50914;
+  --bs-link-hover-color-rgb: 229, 9, 20;
+  --bs-border-radius: 6px;
+  --bs-focus-ring-color: rgba(229, 9, 20, 0.4);
 }
 
-/* Lien d'évitement : visible uniquement quand il reçoit le focus */
-.lien-evitement {
-  position: absolute;
-  top: -100px;
-  left: 0;
-  padding: 0.5rem 1rem;
-  background: #000;
-  color: #fff;
-  z-index: 100;
+.btn-primary {
+  --bs-btn-color: #ffffff;
+  --bs-btn-bg: #e50914;
+  --bs-btn-border-color: #e50914;
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: rgb(76.3333333333%, 3%, 6.6666666667%);
+  --bs-btn-hover-border-color: rgb(76.3333333333%, 3%, 6.6666666667%);
+  --bs-btn-focus-shadow-rgb: 233, 46, 55;
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-active-bg: rgb(67.3529411765%, 2.6470588235%, 5.8823529412%);
+  --bs-btn-active-border-color: rgb(67.3529411765%, 2.6470588235%, 5.8823529412%);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #e50914;
+  --bs-btn-disabled-border-color: #e50914;
 }
 
-.lien-evitement:focus {
-  top: 0;
+.btn-secondary {
+  --bs-btn-color: #ffffff;
+  --bs-btn-bg: rgba(86, 77, 77, 0.8);
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: #564d4d;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-focus-shadow-rgb: 255, 255, 255;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: rgba(24.5276292335%, 21.9607843137%, 21.9607843137%, 0.84);
+  --bs-btn-active-border-color: rgba(0, 0, 0, 0.25);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: rgba(86, 77, 77, 0.8);
+  --bs-btn-disabled-border-color: transparent;
 }
+
+.form-control:focus,
+.form-check-input:focus {
+  border-color: #e50914;
+  box-shadow: 0 0 0 0.25rem rgba(229, 9, 20, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: #e50914;
+  border-color: #e50914;
+}
+
+/*# sourceMappingURL=style.css.map */
