@@ -1,0 +1,16 @@
+{
+  "name": "streamflix",
+  "version": "1.0.0",
+  "description": "Plateforme de streaming StreamFlix - projet fil rouge",
+  "private": true,
+  "scripts": {
+    "watch": "sass --watch scss/style.scss css/style.css --load-path=node_modules --quiet-deps --silence-deprecation=import",
+    "build": "sass scss/style.scss css/style.css --style=compressed --load-path=node_modules --quiet-deps --silence-deprecation=import"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "sass": "^1.105.0"
+  }
+}
