@@ -7,6 +7,9 @@
 @use 'vendors/bootstrap-custom';
 
 // 2. Base : reset et typographie
+@use 'base/reset';
+@use 'base/typography';
+
 // 3. Layout : grandes zones de la page
 // 4. Components : éléments réutilisables
 // 5. Pages : styles propres à une page

@@ -1,0 +1,55 @@
+// ==========================================
+// Typographie
+// ==========================================
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+body {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  color: $text-light;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+small,
+.form-text {
+  font-size: $font-size-small;
+}
+
+.lead {
+  font-size: $font-size-base * 1.1;
+
+  @include respond-to('lg') {
+    font-size: $font-size-large * 0.8;
+  }
+}
+
+a {
+  transition: color $transition-speed ease;
+  @include focus-ring;
+}
+
+// Lien d'évitement : bien visible quand il prend le focus
+.lien-evitement:focus {
+  position: fixed;
+  top: $spacing-unit;
+  left: $spacing-unit;
+  z-index: 2000;
+  padding: $spacing-unit * 0.5 $spacing-unit;
+  background-color: $text-light;
+  color: $primary-dark;
+  font-family: $font-secondary;
+  font-weight: 700;
+  border-radius: $border-radius;
+}

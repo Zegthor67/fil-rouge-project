@@ -1,0 +1,39 @@
+// ==========================================
+// Reset
+// ==========================================
+// Bootstrap fournit déjà son Reboot, on complète juste ce qui manque.
+
+@use '../utils/variables' as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $background-dark;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// La balise main reçoit le focus via le lien d'évitement, pas besoin de contour
+main:focus {
+  outline: none;
+}
+
+// Pas d'animations pour ceux qui les ont désactivées dans leur système
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
