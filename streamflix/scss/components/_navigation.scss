@@ -1,0 +1,52 @@
+// ==========================================
+// Navigation principale et menu profil
+// ==========================================
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: $text-muted;
+  transition: color $transition-speed ease;
+  @include focus-ring;
+
+  &:hover,
+  &:focus-visible {
+    color: $text-light;
+  }
+
+  &.active {
+    color: $text-light;
+    font-weight: 700;
+  }
+
+  // Petit trait rouge sous le lien actif, seulement sur grand écran
+  @include respond-to('lg') {
+    &.active::after {
+      content: '';
+      position: absolute;
+      left: var(--bs-navbar-nav-link-padding-x);
+      right: var(--bs-navbar-nav-link-padding-x);
+      bottom: 0;
+      height: 2px;
+      background-color: $primary-red;
+    }
+  }
+}
+
+.navbar-toggler {
+  border-color: rgba($text-light, 0.3);
+  @include focus-ring;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.profil .dropdown-menu {
+  --bs-dropdown-bg: #{$primary-dark};
+  --bs-dropdown-link-hover-bg: #{$primary-red};
+  --bs-dropdown-link-active-bg: #{$primary-red};
+  --bs-dropdown-border-color: #{$secondary-gray};
+}

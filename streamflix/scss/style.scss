@@ -16,4 +16,9 @@
 @use 'layout/footer';
 
 // 4. Components : éléments réutilisables
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/navigation';
+
 // 5. Pages : styles propres à une page
+@use 'pages/home';

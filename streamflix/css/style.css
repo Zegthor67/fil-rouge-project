@@ -258,4 +258,140 @@ a:focus-visible {
   line-height: 1.8;
 }
 
+.btn {
+  font-weight: 600;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+.btn:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+
+.hero-actions .btn:hover {
+  transform: scale(1.04);
+}
+
+.btn-ma-liste[aria-pressed=true] {
+  background-color: #ffffff;
+  color: #221f1f;
+}
+
+.badge {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.carte-film {
+  --bs-card-bg: #221f1f;
+  --bs-card-border-width: 0;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.carte-film:hover, .carte-film:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+.carte-film .card-img-top {
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  background-color: #564d4d;
+  transition: transform 0.3s ease;
+}
+.carte-film:hover .card-img-top {
+  transform: scale(1.03);
+}
+.carte-film .card-title {
+  margin-bottom: 0.5rem;
+}
+
+.infos-film {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.4rem;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.infos-film dt {
+  font-weight: 400;
+  color: #999999;
+}
+.infos-film dd {
+  margin: 0 0.6rem 0 0;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: #999999;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus-visible {
+  color: #ffffff;
+}
+.navbar-nav .nav-link.active {
+  color: #ffffff;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  .navbar-nav .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: var(--bs-navbar-nav-link-padding-x);
+    right: var(--bs-navbar-nav-link-padding-x);
+    bottom: 0;
+    height: 2px;
+    background-color: #e50914;
+  }
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.navbar-toggler:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.profil .dropdown-menu {
+  --bs-dropdown-bg: #221f1f;
+  --bs-dropdown-link-hover-bg: #e50914;
+  --bs-dropdown-link-active-bg: #e50914;
+  --bs-dropdown-border-color: #564d4d;
+}
+
+.rangee h2 {
+  padding-left: 0.75rem;
+  border-left: 4px solid #e50914;
+}
+
+.inscription .row > div {
+  padding: 1.5rem;
+  background-color: #221f1f;
+  border-radius: 12px;
+}
+@media (min-width: 768px) {
+  .inscription .row > div {
+    padding: 2.5rem;
+  }
+}
+.inscription legend {
+  float: none;
+}
+
+.modal-content {
+  background-color: #221f1f;
+  border: 1px solid #564d4d;
+}
+
 /*# sourceMappingURL=style.css.map */

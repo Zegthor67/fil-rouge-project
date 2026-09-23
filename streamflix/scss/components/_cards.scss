@@ -1,0 +1,49 @@
+// ==========================================
+// Cartes de films
+// ==========================================
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.carte-film {
+  --bs-card-bg: #{$primary-dark};
+  --bs-card-border-width: 0;
+  overflow: hidden;
+  @include hover-lift;
+
+  .card-img-top {
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    // Couleur de fond visible tant que l'affiche n'est pas chargée
+    background-color: $secondary-gray;
+    transition: transform $transition-speed ease;
+  }
+
+  &:hover .card-img-top {
+    transform: scale(1.03);
+  }
+
+  .card-title {
+    margin-bottom: $spacing-unit * 0.5;
+  }
+}
+
+// Liste des infos d'un film (année, note, durée, genres) sur une ou deux lignes
+.infos-film {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: $spacing-unit * 0.25 $spacing-unit * 0.4;
+  margin-bottom: 0;
+  font-size: $font-size-small;
+
+  dt {
+    font-weight: 400;
+    color: $text-muted;
+  }
+
+  dd {
+    margin: 0 $spacing-unit * 0.6 0 0;
+    font-weight: 600;
+  }
+}
