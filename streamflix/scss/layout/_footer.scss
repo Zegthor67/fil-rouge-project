@@ -1,22 +1,22 @@
 @use '../utils/variables' as *;
 
 .pied-de-page {
-  background-color: $primary-dark;
-  color: $text-muted;
+  background-color: var(--sf-surface);
+  color: var(--sf-text-muted);
   font-size: $font-size-small;
 
   h2 {
-    color: $text-light;
+    color: var(--sf-text);
     letter-spacing: 0.08em;
   }
 
   a {
-    color: $text-muted;
+    color: var(--sf-text-muted);
     text-decoration: none;
 
     &:hover,
     &:focus-visible {
-      color: $text-light;
+      color: var(--sf-text);
       text-decoration: underline;
     }
   }

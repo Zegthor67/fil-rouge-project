@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background-color: $background-dark;
+  background-color: var(--sf-bg);
   -webkit-font-smoothing: antialiased;
 }
 

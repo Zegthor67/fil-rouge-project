@@ -4,7 +4,7 @@
 body {
   font-family: $font-primary;
   font-size: $font-size-base;
-  color: $text-light;
+  color: var(--sf-text);
   line-height: 1.5;
 }
 

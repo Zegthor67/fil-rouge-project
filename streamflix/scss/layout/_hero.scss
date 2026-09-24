@@ -5,6 +5,7 @@
   min-height: $hero-min-height;
   overflow: hidden;
   background-color: $primary-dark;
+  color: $text-light;
 
   @include respond-to('md') {
     min-height: $hero-height;

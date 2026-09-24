@@ -12,7 +12,8 @@
 }
 
 @mixin hover-lift($distance: -6px) {
-  transition: transform $transition-speed ease, box-shadow $transition-speed ease;
+  transition: transform $transition-speed ease, box-shadow $transition-speed ease,
+    background-color $transition-speed ease, color $transition-speed ease;
 
   &:hover,
   &:focus-within {

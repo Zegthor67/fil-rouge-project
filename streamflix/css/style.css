@@ -62,7 +62,7 @@ html {
 }
 
 body {
-  background-color: #141414;
+  background-color: var(--sf-bg);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -89,7 +89,7 @@ main:focus {
 body {
   font-family: "Netflix Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
-  color: #ffffff;
+  color: var(--sf-text);
   line-height: 1.5;
 }
 
@@ -142,9 +142,9 @@ a:focus-visible {
   position: sticky;
   top: 0;
   z-index: 1030;
-  background-color: rgba(20, 20, 20, 0.95);
+  background-color: rgba(var(--sf-bg-rgb), 0.95);
   backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--sf-border);
 }
 .entete .navbar {
   padding-top: 0.75rem;
@@ -160,12 +160,12 @@ a:focus-visible {
   }
 }
 .entete .recherche .form-control {
-  background-color: rgba(34, 31, 31, 0.8);
-  border-color: #564d4d;
-  color: #ffffff;
+  background-color: var(--sf-surface);
+  border-color: var(--sf-border);
+  color: var(--sf-text);
 }
 .entete .recherche .form-control::placeholder {
-  color: #999999;
+  color: var(--sf-text-muted);
 }
 @media (min-width: 992px) {
   .entete .recherche .form-control {
@@ -177,6 +177,7 @@ a:focus-visible {
   min-height: 480px;
   overflow: hidden;
   background-color: #221f1f;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .hero {
@@ -227,20 +228,20 @@ a:focus-visible {
 }
 
 .pied-de-page {
-  background-color: #221f1f;
-  color: #999999;
+  background-color: var(--sf-surface);
+  color: var(--sf-text-muted);
   font-size: 14px;
 }
 .pied-de-page h2 {
-  color: #ffffff;
+  color: var(--sf-text);
   letter-spacing: 0.08em;
 }
 .pied-de-page a {
-  color: #999999;
+  color: var(--sf-text-muted);
   text-decoration: none;
 }
 .pied-de-page a:hover, .pied-de-page a:focus-visible {
-  color: #ffffff;
+  color: var(--sf-text);
   text-decoration: underline;
 }
 .pied-de-page address {
@@ -275,10 +276,10 @@ a:focus-visible {
 }
 
 .carte-film {
-  --bs-card-bg: #221f1f;
+  --bs-card-bg: var(--sf-surface);
   --bs-card-border-width: 0;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 .carte-film:hover, .carte-film:focus-within {
   transform: translateY(-6px);
@@ -307,7 +308,7 @@ a:focus-visible {
 }
 .infos-film dt {
   font-weight: 400;
-  color: #999999;
+  color: var(--sf-text-muted);
 }
 .infos-film dd {
   margin: 0 0.6rem 0 0;
@@ -316,7 +317,7 @@ a:focus-visible {
 
 .navbar-nav .nav-link {
   position: relative;
-  color: #999999;
+  color: var(--sf-text-muted);
   transition: color 0.3s ease;
 }
 .navbar-nav .nav-link:focus-visible {
@@ -324,10 +325,10 @@ a:focus-visible {
   outline-offset: 3px;
 }
 .navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus-visible {
-  color: #ffffff;
+  color: var(--sf-text);
 }
 .navbar-nav .nav-link.active {
-  color: #ffffff;
+  color: var(--sf-text);
   font-weight: 700;
 }
 @media (min-width: 992px) {
@@ -343,7 +344,7 @@ a:focus-visible {
 }
 
 .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: var(--sf-border);
 }
 .navbar-toggler:focus-visible {
   outline: 3px solid #ffffff;
@@ -354,10 +355,11 @@ a:focus-visible {
 }
 
 .profil .dropdown-menu {
-  --bs-dropdown-bg: #221f1f;
+  --bs-dropdown-bg: var(--sf-surface);
+  --bs-dropdown-link-color: var(--sf-text);
   --bs-dropdown-link-hover-bg: #e50914;
   --bs-dropdown-link-active-bg: #e50914;
-  --bs-dropdown-border-color: #564d4d;
+  --bs-dropdown-border-color: var(--sf-border);
 }
 
 .rangee h2 {
@@ -367,7 +369,7 @@ a:focus-visible {
 
 .inscription .row > div {
   padding: 1.5rem;
-  background-color: #221f1f;
+  background-color: var(--sf-surface);
   border-radius: 12px;
 }
 @media (min-width: 768px) {
@@ -380,8 +382,8 @@ a:focus-visible {
 }
 
 .modal-content {
-  background-color: #221f1f;
-  border: 1px solid #564d4d;
+  background-color: var(--sf-surface);
+  border: 1px solid var(--sf-border);
 }
 
 [data-bs-theme=dark] {

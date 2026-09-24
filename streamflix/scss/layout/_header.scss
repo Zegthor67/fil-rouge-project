@@ -5,9 +5,9 @@
   position: sticky;
   top: 0;
   z-index: 1030;
-  background-color: rgba($background-dark, 0.95);
+  background-color: rgba(var(--sf-bg-rgb), 0.95);
   backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba($text-light, 0.05);
+  border-bottom: 1px solid var(--sf-border);
 
   .navbar {
     padding-top: $spacing-unit * 0.75;
@@ -24,12 +24,12 @@
   }
 
   .recherche .form-control {
-    background-color: rgba($primary-dark, 0.8);
-    border-color: $secondary-gray;
-    color: $text-light;
+    background-color: var(--sf-surface);
+    border-color: var(--sf-border);
+    color: var(--sf-text);
 
     &::placeholder {
-      color: $text-muted;
+      color: var(--sf-text-muted);
     }
 
     @include respond-to('lg') {

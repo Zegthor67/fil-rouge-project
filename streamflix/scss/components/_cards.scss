@@ -2,7 +2,7 @@
 @use '../utils/mixins' as *;
 
 .carte-film {
-  --bs-card-bg: #{$primary-dark};
+  --bs-card-bg: var(--sf-surface);
   --bs-card-border-width: 0;
   overflow: hidden;
   @include hover-lift;
@@ -33,7 +33,7 @@
 
   dt {
     font-weight: 400;
-    color: $text-muted;
+    color: var(--sf-text-muted);
   }
 
   dd {
