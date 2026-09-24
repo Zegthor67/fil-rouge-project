@@ -3,17 +3,17 @@
 
 .navbar-nav .nav-link {
   position: relative;
-  color: $text-muted;
+  color: var(--sf-text-muted);
   transition: color $transition-speed ease;
   @include focus-ring;
 
   &:hover,
   &:focus-visible {
-    color: $text-light;
+    color: var(--sf-text);
   }
 
   &.active {
-    color: $text-light;
+    color: var(--sf-text);
     font-weight: 700;
   }
 
@@ -31,7 +31,7 @@
 }
 
 .navbar-toggler {
-  border-color: rgba($text-light, 0.3);
+  border-color: var(--sf-border);
   @include focus-ring;
 
   &:focus {
@@ -40,8 +40,9 @@
 }
 
 .profil .dropdown-menu {
-  --bs-dropdown-bg: #{$primary-dark};
+  --bs-dropdown-bg: var(--sf-surface);
+  --bs-dropdown-link-color: var(--sf-text);
   --bs-dropdown-link-hover-bg: #{$primary-red};
   --bs-dropdown-link-active-bg: #{$primary-red};
-  --bs-dropdown-border-color: #{$secondary-gray};
+  --bs-dropdown-border-color: var(--sf-border);
 }

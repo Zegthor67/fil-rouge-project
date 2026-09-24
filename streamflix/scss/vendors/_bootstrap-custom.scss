@@ -19,8 +19,7 @@ $link-hover-color-dark: sf.$primary-red;
 @import 'bootstrap/scss/maps';
 @import 'bootstrap/scss/mixins';
 
-:root,
-[data-bs-theme='dark'] {
+:root {
   --bs-primary: #{$primary};
   --bs-primary-rgb: #{to-rgb($primary)};
   --bs-secondary: #{$secondary};
@@ -31,17 +30,6 @@ $link-hover-color-dark: sf.$primary-red;
   --bs-info-rgb: #{to-rgb($info)};
 
   --bs-body-font-family: #{meta.inspect($font-family-sans-serif)};
-  --bs-body-bg: #{$body-bg-dark};
-  --bs-body-bg-rgb: #{to-rgb($body-bg-dark)};
-  --bs-body-color: #{$body-color-dark};
-  --bs-body-color-rgb: #{to-rgb($body-color-dark)};
-  --bs-secondary-color: #{$body-secondary-color-dark};
-
-  --bs-link-color: #{$link-color-dark};
-  --bs-link-color-rgb: #{to-rgb($link-color-dark)};
-  --bs-link-hover-color: #{$link-hover-color-dark};
-  --bs-link-hover-color-rgb: #{to-rgb($link-hover-color-dark)};
-
   --bs-border-radius: #{$border-radius};
   --bs-focus-ring-color: #{rgba($primary, 0.4)};
 }

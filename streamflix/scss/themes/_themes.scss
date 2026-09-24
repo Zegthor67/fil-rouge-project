@@ -1,0 +1,40 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+@function rgb-values($c) {
+  @return color.channel($c, 'red', $space: rgb), color.channel($c, 'green', $space: rgb),
+    color.channel($c, 'blue', $space: rgb);
+}
+
+@each $nom, $theme in $themes {
+  [data-bs-theme='#{$nom}'] {
+    --sf-bg: #{map.get($theme, 'bg')};
+    --sf-bg-rgb: #{rgb-values(map.get($theme, 'bg'))};
+    --sf-surface: #{map.get($theme, 'surface')};
+    --sf-text: #{map.get($theme, 'text')};
+    --sf-text-muted: #{map.get($theme, 'text-muted')};
+    --sf-border: #{map.get($theme, 'border')};
+
+    --bs-body-bg: var(--sf-bg);
+    --bs-body-bg-rgb: var(--sf-bg-rgb);
+    --bs-body-color: var(--sf-text);
+    --bs-body-color-rgb: #{rgb-values(map.get($theme, 'text'))};
+    --bs-secondary-color: var(--sf-text-muted);
+    --bs-border-color: var(--sf-border);
+    --bs-link-color: var(--sf-text);
+    --bs-link-color-rgb: #{rgb-values(map.get($theme, 'text'))};
+    --bs-link-hover-color: #{$primary-red};
+    --bs-link-hover-color-rgb: #{rgb-values($primary-red)};
+  }
+}
+
+body,
+.entete,
+.pied-de-page,
+.inscription > .row > div,
+.modal-content,
+.dropdown-menu {
+  @include theme-transition;
+}
