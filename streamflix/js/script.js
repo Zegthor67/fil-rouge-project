@@ -9,3 +9,17 @@ document.querySelectorAll('.btn-ma-liste').forEach((bouton) => {
     bouton.textContent = ajoute ? 'Ma Liste' : 'Dans ma liste';
   });
 });
+
+const switchTheme = document.getElementById('switch-theme');
+
+if (switchTheme) {
+  switchTheme.checked = document.documentElement.getAttribute('data-bs-theme') === 'light';
+
+  switchTheme.addEventListener('change', () => {
+    const theme = switchTheme.checked ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-bs-theme', theme);
+    try {
+      localStorage.setItem('theme', theme);
+    } catch (e) {}
+  });
+}

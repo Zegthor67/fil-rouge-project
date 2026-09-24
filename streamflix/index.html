@@ -16,6 +16,13 @@
   <meta property="og:image" content="images/hero-bg.jpg">
   <meta property="og:locale" content="fr_FR">
 
+  <script>
+    try {
+      const theme = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-bs-theme', theme);
+    } catch (e) {}
+  </script>
+
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
@@ -44,10 +51,15 @@
             <li class="nav-item"><a class="nav-link" href="ma-liste.html">Ma Liste</a></li>
           </ul>
 
+          <div class="form-check form-switch mb-3 mb-lg-0 me-lg-3">
+            <input class="form-check-input" type="checkbox" role="switch" id="switch-theme">
+            <label class="form-check-label" for="switch-theme">Mode clair</label>
+          </div>
+
           <form class="recherche d-flex gap-2 mb-3 mb-lg-0 me-lg-3" role="search" action="recherche.html" method="get">
             <label for="recherche" class="visually-hidden">Rechercher un film ou une série</label>
             <input type="search" class="form-control form-control-sm" id="recherche" name="q" placeholder="Titre, genre..." minlength="2" required autocomplete="off">
-            <button type="submit" class="btn btn-sm btn-outline-light">Rechercher</button>
+            <button type="submit" class="btn btn-sm btn-primary">Rechercher</button>
           </form>
 
           <div class="dropdown profil">

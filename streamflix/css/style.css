@@ -227,6 +227,10 @@ a:focus-visible {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
+.hero .infos-film dt {
+  color: #999999;
+}
+
 .pied-de-page {
   background-color: var(--sf-surface);
   color: var(--sf-text-muted);
