@@ -29,3 +29,27 @@ $breakpoints: (
   'lg': 992px,
   'xl': 1200px
 );
+
+// Thème clair
+$light-bg: #f5f5f1;
+$light-surface: #ffffff;
+$light-text-muted: #5f5f5f;
+$light-border: #d9d9d9;
+
+// Thèmes
+$themes: (
+  'dark': (
+    'bg': $background-dark,
+    'surface': $primary-dark,
+    'text': $text-light,
+    'text-muted': $text-muted,
+    'border': $secondary-gray
+  ),
+  'light': (
+    'bg': $light-bg,
+    'surface': $light-surface,
+    'text': $primary-dark,
+    'text-muted': $light-text-muted,
+    'border': $light-border
+  )
+);
