@@ -1,15 +1,6 @@
-// ==========================================
-// Personnalisation de Bootstrap
-// ==========================================
-// Bootstrap est chargé par le CDN dans index.html.
-// Ici on importe seulement ses fonctions, variables et mixins (depuis node_modules),
-// ce qui ne génère aucun CSS. On s'en sert pour réécrire les variables CSS
-// de Bootstrap avec les couleurs StreamFlix, sans dupliquer tout le framework.
-
 @use 'sass:meta';
 @use '../utils/variables' as sf;
 
-// 1. Variables Bootstrap personnalisées (avant l'import, grâce aux !default)
 $primary: sf.$primary-red;
 $secondary: sf.$secondary-gray;
 $dark: sf.$primary-dark;
@@ -22,14 +13,12 @@ $border-radius: sf.$border-radius;
 $link-color-dark: sf.$text-light;
 $link-hover-color-dark: sf.$primary-red;
 
-// 2. Outils Bootstrap (aucune sortie CSS)
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/variables-dark';
 @import 'bootstrap/scss/maps';
 @import 'bootstrap/scss/mixins';
 
-// 3. On remplace les variables CSS du CDN par les nôtres
 :root,
 [data-bs-theme='dark'] {
   --bs-primary: #{$primary};
@@ -57,7 +46,6 @@ $link-hover-color-dark: sf.$primary-red;
   --bs-focus-ring-color: #{rgba($primary, 0.4)};
 }
 
-// 4. Boutons régénérés avec le mixin officiel de Bootstrap
 .btn-primary {
   @include button-variant(
     $primary,
@@ -83,7 +71,6 @@ $link-hover-color-dark: sf.$primary-red;
   );
 }
 
-// Champs de formulaire : focus aux couleurs StreamFlix
 .form-control:focus,
 .form-check-input:focus {
   border-color: $primary;

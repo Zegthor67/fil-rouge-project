@@ -1,9 +1,3 @@
-// ==========================================
-// Boutons
-// ==========================================
-// Les couleurs viennent de vendors/_bootstrap-custom.scss,
-// ici on ajoute seulement le comportement propre à StreamFlix.
-
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 
@@ -18,12 +12,10 @@
   }
 }
 
-// Boutons du hero un peu plus présents au survol
 .hero-actions .btn:hover {
   transform: scale(1.04);
 }
 
-// Bouton "Ma Liste" une fois le film ajouté
 .btn-ma-liste[aria-pressed='true'] {
   background-color: $text-light;
   color: $primary-dark;

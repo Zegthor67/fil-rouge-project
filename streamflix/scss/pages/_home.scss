@@ -1,11 +1,6 @@
-// ==========================================
-// Page d'accueil
-// ==========================================
-
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 
-// Titres des rangées de films avec un repère rouge à gauche
 .rangee h2 {
   padding-left: $spacing-unit * 0.75;
   border-left: 4px solid $primary-red;
@@ -27,7 +22,6 @@
   }
 }
 
-// Modal "Plus d'infos"
 .modal-content {
   background-color: $primary-dark;
   border: 1px solid $secondary-gray;

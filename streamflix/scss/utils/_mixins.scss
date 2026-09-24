@@ -1,11 +1,6 @@
-// ==========================================
-// Mixins réutilisables
-// ==========================================
-
 @use 'sass:map';
 @use 'variables' as *;
 
-// Media query à partir d'un point de rupture : @include respond-to('md') { ... }
 @mixin respond-to($breakpoint) {
   @if map.has-key($breakpoints, $breakpoint) {
     @media (min-width: map.get($breakpoints, $breakpoint)) {
@@ -16,7 +11,6 @@
   }
 }
 
-// Effet de survol utilisé sur les cartes : légère montée + ombre
 @mixin hover-lift($distance: -6px) {
   transition: transform $transition-speed ease, box-shadow $transition-speed ease;
 
@@ -27,7 +21,6 @@
   }
 }
 
-// Dégradé sombre pour rendre le texte lisible sur une image
 @mixin overlay-gradient($direction: to top, $opacity: 0.9) {
   background: linear-gradient(
     $direction,
@@ -37,7 +30,6 @@
   );
 }
 
-// Contour de focus bien visible pour la navigation au clavier
 @mixin focus-ring($color: $text-light) {
   &:focus-visible {
     outline: 3px solid $color;
@@ -45,7 +37,6 @@
   }
 }
 
-// Couvre tout le parent (image de fond, overlay...)
 @mixin cover-parent {
   position: absolute;
   inset: 0;

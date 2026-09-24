@@ -1,7 +1,3 @@
-// ==========================================
-// Typographie
-// ==========================================
-
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 
@@ -40,7 +36,6 @@ a {
   @include focus-ring;
 }
 
-// Lien d'évitement : bien visible quand il prend le focus
 .lien-evitement:focus {
   position: fixed;
   top: $spacing-unit;

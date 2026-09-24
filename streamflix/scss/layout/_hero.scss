@@ -1,7 +1,3 @@
-// ==========================================
-// Section hero (film à la une)
-// ==========================================
-
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 
@@ -21,7 +17,6 @@
   object-position: center top;
 }
 
-// Deux dégradés : un par le bas et un par la gauche, là où se trouve le texte
 .hero-overlay {
   @include cover-parent;
   @include overlay-gradient(to top, 1);

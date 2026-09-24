@@ -1,7 +1,3 @@
-// ==========================================
-// Cartes de films
-// ==========================================
-
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 
@@ -14,7 +10,6 @@
   .card-img-top {
     aspect-ratio: 2 / 3;
     object-fit: cover;
-    // Couleur de fond visible tant que l'affiche n'est pas chargée
     background-color: $secondary-gray;
     transition: transform $transition-speed ease;
   }
@@ -28,7 +23,6 @@
   }
 }
 
-// Liste des infos d'un film (année, note, durée, genres) sur une ou deux lignes
 .infos-film {
   display: flex;
   flex-wrap: wrap;
