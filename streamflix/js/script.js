@@ -1,3 +1,23 @@
+// ===================================
+// EXERCICE 1 : Afficher/masquer sections
+// ===================================
+
+const boutonsSection = document.querySelectorAll('.btn-toggle-section');
+
+boutonsSection.forEach((bouton) => {
+  bouton.addEventListener('click', () => {
+    const grille = document.querySelector('#' + bouton.getAttribute('aria-controls'));
+    const estMasquee = grille.classList.toggle('hidden');
+
+    bouton.textContent = estMasquee ? 'Afficher' : 'Masquer';
+    bouton.setAttribute('aria-expanded', String(!estMasquee));
+  });
+});
+
+// ===================================
+// Bootstrap et thème
+// ===================================
+
 document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((el) => {
   new bootstrap.Tooltip(el);
 });

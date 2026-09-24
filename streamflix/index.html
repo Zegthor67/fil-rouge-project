@@ -111,8 +111,11 @@
     </section>
 
     <section class="rangee container-fluid px-3 px-lg-5 py-4" aria-labelledby="titre-tendances">
-      <h2 id="titre-tendances" class="h3 mb-3">Tendances actuelles</h2>
-      <ul class="grille-films row g-4 list-unstyled">
+      <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+        <h2 id="titre-tendances" class="h3 mb-0">Tendances actuelles</h2>
+        <button type="button" class="btn btn-sm btn-outline-secondary btn-toggle-section" aria-expanded="true" aria-controls="grille-tendances">Masquer</button>
+      </div>
+      <ul id="grille-tendances" class="grille-films row g-4 list-unstyled">
         <li class="col-12 col-sm-6 col-lg-4">
           <article class="card carte-film h-100">
             <img src="images/films/dark-knight.jpg" alt="Affiche du film The Dark Knight" class="card-img-top" loading="lazy">
@@ -180,8 +183,11 @@
     </section>
 
     <section class="rangee container-fluid px-3 px-lg-5 py-4" aria-labelledby="titre-recommandes">
-      <h2 id="titre-recommandes" class="h3 mb-3">Recommandés pour vous</h2>
-      <ul class="grille-films row g-4 list-unstyled">
+      <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+        <h2 id="titre-recommandes" class="h3 mb-0">Recommandés pour vous</h2>
+        <button type="button" class="btn btn-sm btn-outline-secondary btn-toggle-section" aria-expanded="true" aria-controls="grille-recommandes">Masquer</button>
+      </div>
+      <ul id="grille-recommandes" class="grille-films row g-4 list-unstyled">
         <li class="col-12 col-sm-6 col-lg-4">
           <article class="card carte-film h-100">
             <img src="images/films/inception.jpg" alt="Affiche du film Inception" class="card-img-top" loading="lazy">
@@ -249,8 +255,11 @@
     </section>
 
     <section class="rangee container-fluid px-3 px-lg-5 py-4" aria-labelledby="titre-nouveautes">
-      <h2 id="titre-nouveautes" class="h3 mb-3">Nouveautés</h2>
-      <ul class="grille-films row g-4 list-unstyled">
+      <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+        <h2 id="titre-nouveautes" class="h3 mb-0">Nouveautés</h2>
+        <button type="button" class="btn btn-sm btn-outline-secondary btn-toggle-section" aria-expanded="true" aria-controls="grille-nouveautes">Masquer</button>
+      </div>
+      <ul id="grille-nouveautes" class="grille-films row g-4 list-unstyled">
         <li class="col-12 col-sm-6 col-lg-4">
           <article class="card carte-film h-100">
             <img src="images/films/interstellar.jpg" alt="Affiche du film Interstellar" class="card-img-top" loading="lazy">

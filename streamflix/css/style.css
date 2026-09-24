@@ -390,6 +390,10 @@ a:focus-visible {
   border: 1px solid var(--sf-border);
 }
 
+.hidden {
+  display: none;
+}
+
 [data-bs-theme=dark] {
   --sf-bg: #141414;
   --sf-bg-rgb: 20, 20, 20;
