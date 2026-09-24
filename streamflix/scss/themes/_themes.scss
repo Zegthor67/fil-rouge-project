@@ -33,7 +33,7 @@
 body,
 .entete,
 .pied-de-page,
-.inscription .row > div,
+.inscription > .row > div,
 .modal-content,
 .dropdown-menu {
   @include theme-transition;

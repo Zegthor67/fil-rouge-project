@@ -371,13 +371,13 @@ a:focus-visible {
   border-left: 4px solid #e50914;
 }
 
-.inscription .row > div {
+.inscription > .row > div {
   padding: 1.5rem;
   background-color: var(--sf-surface);
   border-radius: 12px;
 }
 @media (min-width: 768px) {
-  .inscription .row > div {
+  .inscription > .row > div {
     padding: 2.5rem;
   }
 }
@@ -431,7 +431,7 @@ a:focus-visible {
 body,
 .entete,
 .pied-de-page,
-.inscription .row > div,
+.inscription > .row > div,
 .modal-content,
 .dropdown-menu {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;

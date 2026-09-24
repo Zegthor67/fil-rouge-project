@@ -7,7 +7,7 @@
 }
 
 .inscription {
-  .row > div {
+  > .row > div {
     padding: $spacing-unit * 1.5;
     background-color: var(--sf-surface);
     border-radius: $border-radius * 2;
