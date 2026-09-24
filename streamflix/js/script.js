@@ -1,19 +1,11 @@
-// Menu du profil : ouverture / fermeture au clic et touche Échap pour fermer
-const boutonProfil = document.querySelector('.profil-bouton');
-const menuProfil = document.getElementById('menu-profil');
+document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((el) => {
+  new bootstrap.Tooltip(el);
+});
 
-if (boutonProfil && menuProfil) {
-  boutonProfil.addEventListener('click', () => {
-    const ouvert = boutonProfil.getAttribute('aria-expanded') === 'true';
-    boutonProfil.setAttribute('aria-expanded', String(!ouvert));
-    menuProfil.hidden = ouvert;
+document.querySelectorAll('.btn-ma-liste').forEach((bouton) => {
+  bouton.addEventListener('click', () => {
+    const ajoute = bouton.getAttribute('aria-pressed') === 'true';
+    bouton.setAttribute('aria-pressed', String(!ajoute));
+    bouton.textContent = ajoute ? 'Ma Liste' : 'Dans ma liste';
   });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !menuProfil.hidden) {
-      menuProfil.hidden = true;
-      boutonProfil.setAttribute('aria-expanded', 'false');
-      boutonProfil.focus();
-    }
-  });
-}
+});

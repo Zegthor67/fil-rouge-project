@@ -1,0 +1,28 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.rangee h2 {
+  padding-left: $spacing-unit * 0.75;
+  border-left: 4px solid $primary-red;
+}
+
+.inscription {
+  .row > div {
+    padding: $spacing-unit * 1.5;
+    background-color: $primary-dark;
+    border-radius: $border-radius * 2;
+
+    @include respond-to('md') {
+      padding: $spacing-unit * 2.5;
+    }
+  }
+
+  legend {
+    float: none;
+  }
+}
+
+.modal-content {
+  background-color: $primary-dark;
+  border: 1px solid $secondary-gray;
+}

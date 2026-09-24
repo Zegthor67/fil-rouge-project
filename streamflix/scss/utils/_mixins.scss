@@ -1,0 +1,45 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+@mixin respond-to($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Le point de rupture `#{$breakpoint}` n'existe pas.";
+  }
+}
+
+@mixin hover-lift($distance: -6px) {
+  transition: transform $transition-speed ease, box-shadow $transition-speed ease;
+
+  &:hover,
+  &:focus-within {
+    transform: translateY($distance);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@mixin overlay-gradient($direction: to top, $opacity: 0.9) {
+  background: linear-gradient(
+    $direction,
+    rgba($background-dark, $opacity) 0%,
+    rgba($background-dark, $opacity * 0.5) 50%,
+    rgba($background-dark, 0) 100%
+  );
+}
+
+@mixin focus-ring($color: $text-light) {
+  &:focus-visible {
+    outline: 3px solid $color;
+    outline-offset: 3px;
+  }
+}
+
+@mixin cover-parent {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}

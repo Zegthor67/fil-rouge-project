@@ -1,0 +1,27 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.btn {
+  font-weight: 600;
+  transition: transform $transition-speed ease, background-color $transition-speed ease,
+    color $transition-speed ease;
+  @include focus-ring;
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+.hero-actions .btn:hover {
+  transform: scale(1.04);
+}
+
+.btn-ma-liste[aria-pressed='true'] {
+  background-color: $text-light;
+  color: $primary-dark;
+}
+
+.badge {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}

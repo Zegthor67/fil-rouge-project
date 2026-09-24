@@ -1,0 +1,28 @@
+@use '../utils/variables' as *;
+
+.pied-de-page {
+  background-color: $primary-dark;
+  color: $text-muted;
+  font-size: $font-size-small;
+
+  h2 {
+    color: $text-light;
+    letter-spacing: 0.08em;
+  }
+
+  a {
+    color: $text-muted;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: $text-light;
+      text-decoration: underline;
+    }
+  }
+
+  address {
+    font-style: normal;
+    line-height: 1.8;
+  }
+}

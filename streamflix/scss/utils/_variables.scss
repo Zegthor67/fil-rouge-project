@@ -1,0 +1,31 @@
+// Couleurs
+$primary-red: #e50914;
+$primary-dark: #221f1f;
+$secondary-gray: #564d4d;
+$text-light: #ffffff;
+$text-muted: #999999;
+$accent-blue: #0071eb;
+
+$background-dark: #141414;
+
+// Typo
+$font-primary: 'Netflix Sans', 'Helvetica Neue', sans-serif;
+$font-secondary: 'Arial', sans-serif;
+$font-size-base: 16px;
+$font-size-large: 24px;
+$font-size-small: 14px;
+
+// Divers
+$spacing-unit: 1rem;
+$border-radius: 6px;
+$transition-speed: 0.3s;
+
+$hero-height: 80vh;
+$hero-min-height: 480px;
+
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px
+);
