@@ -15,6 +15,18 @@ boutonsSection.forEach((bouton) => {
 });
 
 // ===================================
+// EXERCICE 2 : Compteur de films
+// ===================================
+
+const nombreFilms = document.querySelectorAll('article').length;
+
+const compteur = document.createElement('p');
+compteur.classList.add('compteur-films', 'text-center', 'mt-2', 'mb-0');
+compteur.textContent = 'Catalogue : ' + nombreFilms + ' films disponibles';
+
+document.querySelector('.pied-de-page .container-fluid').appendChild(compteur);
+
+// ===================================
 // Bootstrap et thème
 // ===================================
 
