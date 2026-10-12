@@ -1,22 +1,6 @@
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 
-.inscription {
-  > .row > div {
-    padding: 24px;
-    background-color: var(--sf-surface);
-    border-radius: 12px;
-
-    @include respond-to('md') {
-      padding: 40px;
-    }
-  }
-
-  legend {
-    float: none;
-  }
-}
-
 .modal-content {
   background-color: var(--sf-surface);
   border: 1px solid var(--sf-border);
