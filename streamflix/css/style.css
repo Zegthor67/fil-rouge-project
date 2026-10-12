@@ -132,8 +132,7 @@ a:focus-visible {
   position: sticky;
   top: 0;
   z-index: 1030;
-  background-color: rgba(var(--sf-bg-rgb), 0.95);
-  backdrop-filter: blur(6px);
+  background-color: var(--sf-bg);
   border-bottom: 1px solid var(--sf-border);
 }
 .entete .navbar {
@@ -163,14 +162,14 @@ a:focus-visible {
 }
 
 .hero {
-  min-height: 480px;
+  min-height: 420px;
   overflow: hidden;
   background-color: #221f1f;
   color: #ffffff;
 }
 @media (min-width: 768px) {
   .hero {
-    min-height: 80vh;
+    min-height: 60vh;
   }
 }
 
@@ -188,24 +187,13 @@ a:focus-visible {
   inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, #1a1a1a 0%, rgba(26, 26, 26, 0.5) 50%, rgba(26, 26, 26, 0) 100%);
-}
-.hero-overlay::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(26, 26, 26, 0.8) 0%, rgba(26, 26, 26, 0.4) 50%, rgba(26, 26, 26, 0) 100%);
+  background: linear-gradient(to right, rgba(26, 26, 26, 0.9) 0%, rgba(26, 26, 26, 0.45) 50%, rgba(26, 26, 26, 0) 100%);
 }
 
 .hero-contenu {
   position: relative;
   z-index: 1;
-  padding-top: 6rem;
-}
-.hero-contenu h2 {
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+  padding-top: 4rem;
 }
 
 .hero-etiquette {
@@ -216,7 +204,6 @@ a:focus-visible {
 
 .hero-description {
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .hero .infos-film dt {
@@ -247,18 +234,10 @@ a:focus-visible {
 
 .btn {
   font-weight: 600;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 .btn:focus-visible {
   outline: 3px solid #ffffff;
   outline-offset: 3px;
-}
-.btn:active {
-  transform: scale(0.97);
-}
-
-.hero-actions .btn:hover {
-  transform: scale(1.04);
 }
 
 .btn-ma-liste[aria-pressed=true] {
@@ -273,29 +252,20 @@ a:focus-visible {
 
 .carte-film {
   --bs-card-bg: var(--sf-surface);
-  --bs-card-border-width: 0;
+  --bs-card-border-color: var(--sf-border);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  transition: border-color 0.3s;
 }
-.carte-film:hover, .carte-film:focus-within {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+.carte-film:hover {
+  border-color: #e50914;
 }
 .carte-film .card-img-top {
   aspect-ratio: 2/3;
   object-fit: cover;
   background-color: #564d4d;
-  transition: transform 0.3s ease;
-}
-.carte-film:hover .card-img-top {
-  transform: scale(1.03);
 }
 .carte-film .card-title {
   margin-bottom: 8px;
-  transition: color 0.3s;
-}
-.carte-film:hover .card-title {
-  color: #e50914;
 }
 
 .infos-film {
@@ -337,7 +307,6 @@ a:focus-visible {
 }
 
 .navbar-nav .nav-link {
-  position: relative;
   color: var(--sf-text-muted);
   transition: color 0.3s ease;
 }
@@ -351,17 +320,6 @@ a:focus-visible {
 .navbar-nav .nav-link.active {
   color: var(--sf-text);
   font-weight: 700;
-}
-@media (min-width: 992px) {
-  .navbar-nav .nav-link.active::after {
-    content: "";
-    position: absolute;
-    left: var(--bs-navbar-nav-link-padding-x);
-    right: var(--bs-navbar-nav-link-padding-x);
-    bottom: 0;
-    height: 2px;
-    background-color: #e50914;
-  }
 }
 
 .navbar-toggler {
@@ -381,21 +339,6 @@ a:focus-visible {
   --bs-dropdown-link-hover-bg: #e50914;
   --bs-dropdown-link-active-bg: #e50914;
   --bs-dropdown-border-color: var(--sf-border);
-}
-
-.rangee h2 {
-  position: relative;
-  padding-bottom: 8px;
-}
-.rangee h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 40px;
-  height: 3px;
-  border-radius: 2px;
-  background-color: #e50914;
 }
 
 .inscription > .row > div {

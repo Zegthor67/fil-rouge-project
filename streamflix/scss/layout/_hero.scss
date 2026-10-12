@@ -21,23 +21,13 @@
 // dégradé noir pour que le texte reste lisible sur l'image
 .hero-overlay {
   @include cover-parent;
-  @include overlay-gradient(to top, 1);
-
-  &::after {
-    content: '';
-    @include cover-parent;
-    @include overlay-gradient(to right, 0.8);
-  }
+  @include overlay-gradient(to right, 0.9);
 }
 
 .hero-contenu {
   position: relative;
   z-index: 1;
-  padding-top: 6rem;
-
-  h2 {
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
-  }
+  padding-top: 4rem;
 }
 
 .hero-etiquette {
@@ -48,7 +38,6 @@
 
 .hero-description {
   color: rgba($text-light, 0.9);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .hero .infos-film dt {

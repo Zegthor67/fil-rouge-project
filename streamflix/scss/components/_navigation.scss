@@ -2,7 +2,6 @@
 @use '../utils/mixins' as *;
 
 .navbar-nav .nav-link {
-  position: relative;
   color: var(--sf-text-muted);
   transition: color $transition-speed ease;
   @include focus-ring;
@@ -15,19 +14,6 @@
   &.active {
     color: var(--sf-text);
     font-weight: 700;
-  }
-
-  // trait rouge sous le lien actif (seulement sur grand écran)
-  @include respond-to('lg') {
-    &.active::after {
-      content: '';
-      position: absolute;
-      left: var(--bs-navbar-nav-link-padding-x);
-      right: var(--bs-navbar-nav-link-padding-x);
-      bottom: 0;
-      height: 2px;
-      background-color: $primary-red;
-    }
   }
 }
 

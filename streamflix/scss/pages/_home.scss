@@ -1,23 +1,6 @@
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 
-// petite barre rouge sous les titres de section
-.rangee h2 {
-  position: relative;
-  padding-bottom: 8px;
-
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 3px;
-    border-radius: 2px;
-    background-color: $primary-red;
-  }
-}
-
 .inscription {
   > .row > div {
     padding: 24px;

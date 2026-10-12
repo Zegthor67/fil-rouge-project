@@ -3,28 +3,22 @@
 
 .carte-film {
   --bs-card-bg: var(--sf-surface);
-  --bs-card-border-width: 0;
+  --bs-card-border-color: var(--sf-border);
   overflow: hidden;
-  @include hover-lift;
+  transition: border-color $transition-speed;
+
+  &:hover {
+    border-color: $primary-red;
+  }
 
   .card-img-top {
     aspect-ratio: 2 / 3;
     object-fit: cover;
     background-color: $secondary-gray;
-    transition: transform $transition-speed ease;
-  }
-
-  &:hover .card-img-top {
-    transform: scale(1.03);
   }
 
   .card-title {
     margin-bottom: 8px;
-    transition: color $transition-speed;
-  }
-
-  &:hover .card-title {
-    color: $primary-red;
   }
 }
 

@@ -8,18 +8,6 @@
   }
 }
 
-// la carte monte un peu au survol
-@mixin hover-lift($distance: -6px) {
-  transition: transform $transition-speed ease, box-shadow $transition-speed ease,
-    background-color $transition-speed ease, color $transition-speed ease;
-
-  &:hover,
-  &:focus-within {
-    transform: translateY($distance);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
-  }
-}
-
 @mixin overlay-gradient($direction: to top, $opacity: 0.9) {
   background: linear-gradient(
     $direction,
