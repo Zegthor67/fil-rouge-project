@@ -1,66 +1,38 @@
 @use '../utils/variables' as *;
-@use '../utils/mixins' as *;
 
 .carte-film {
-  --bs-card-bg: var(--sf-surface);
-  --bs-card-border-width: 0;
-  overflow: hidden;
-  @include hover-lift;
+  cursor: pointer;
 
   .card-img-top {
     aspect-ratio: 2 / 3;
     object-fit: cover;
-    background-color: $secondary-gray;
-    transition: transform $transition-speed ease;
-  }
-
-  &:hover .card-img-top {
-    transform: scale(1.03);
-  }
-
-  .card-title {
-    margin-bottom: $spacing-unit * 0.5;
   }
 }
 
 .infos-film {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  gap: $spacing-unit * 0.25 $spacing-unit * 0.4;
-  margin-bottom: 0;
+  gap: 4px 8px;
   font-size: $font-size-small;
 
-  dt {
-    font-weight: 400;
-    color: var(--sf-text-muted);
-  }
-
   dd {
-    margin: 0 $spacing-unit * 0.6 0 0;
-    font-weight: 600;
+    margin: 0 8px 0 0;
   }
 }
 
-// Exercice 3 : film marqué comme vu
-.carte-film {
-  cursor: pointer;
-}
-
+// exo 3
 .watched {
   opacity: 0.6;
   position: relative;
+}
 
-  &::after {
-    content: '✓ Vu';
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 1;
-    background: green;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-weight: 700;
-  }
+.watched::after {
+  content: "✓ Vu";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: green;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
 }
