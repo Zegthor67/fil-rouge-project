@@ -1,6 +1,4 @@
-// ===================================
-// EXERCICE 1 : Afficher/masquer sections
-// ===================================
+// Afficher / masquer les sections
 
 const boutonsSection = document.querySelectorAll('.btn-toggle-section');
 
@@ -14,9 +12,7 @@ boutonsSection.forEach((bouton) => {
   });
 });
 
-// ===================================
-// EXERCICE 2 : Compteur de films
-// ===================================
+// Compteur de films
 
 const nombreFilms = document.querySelectorAll('article').length;
 
@@ -26,15 +22,13 @@ compteur.textContent = 'Catalogue : ' + nombreFilms + ' films disponibles';
 
 document.querySelector('.pied-de-page .container-fluid').appendChild(compteur);
 
-// ===================================
-// EXERCICE 3 : Films vus
-// ===================================
+// Films vus
 
 const cartesFilms = document.querySelectorAll('.carte-film');
 
 cartesFilms.forEach((carte) => {
   carte.addEventListener('click', (event) => {
-    // le bouton "Voir le film" ouvre la modal (exercice 5), il ne marque pas le film
+    // le bouton "Voir le film" ouvre la modal, il ne marque pas le film
     if (event.target.closest('.btn-details')) {
       return;
     }
@@ -44,9 +38,7 @@ cartesFilms.forEach((carte) => {
   });
 });
 
-// ===================================
-// EXERCICE 4 : Recherche
-// ===================================
+// Recherche
 
 const searchInput = document.querySelector('#search');
 const messageRecherche = document.querySelector('#aucun-resultat');
@@ -83,9 +75,7 @@ searchInput.closest('form').addEventListener('submit', (event) => {
   event.preventDefault();
 });
 
-// ===================================
-// EXERCICE 5 : Modal
-// ===================================
+// Modal
 
 const modal = document.querySelector('#modal');
 const modalBody = document.querySelector('#modal-body');
@@ -154,9 +144,7 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-// ===================================
-// EXERCICE 6 : Thème sombre / clair (bonus)
-// ===================================
+// Thème sombre / clair
 
 const boutonTheme = document.querySelector('#bouton-theme');
 
@@ -171,7 +159,7 @@ boutonTheme.addEventListener('click', () => {
   const sombre = document.body.classList.toggle('dark-theme');
   const theme = sombre ? 'dark' : 'light';
 
-  // Bootstrap et nos variables SCSS se basent sur data-bs-theme
+  // Bootstrap se base sur data-bs-theme pour ses couleurs
   document.documentElement.setAttribute('data-bs-theme', theme);
   boutonTheme.textContent = sombre ? 'Mode clair' : 'Mode sombre';
 
@@ -180,9 +168,7 @@ boutonTheme.addEventListener('click', () => {
   } catch (e) {}
 });
 
-// ===================================
-// Bootstrap (tooltip et bouton Ma Liste)
-// ===================================
+// Tooltip et bouton Ma Liste
 
 document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((el) => {
   new bootstrap.Tooltip(el);
