@@ -57,8 +57,8 @@
           </div>
 
           <form class="recherche d-flex gap-2 mb-3 mb-lg-0 me-lg-3" role="search" action="recherche.html" method="get">
-            <label for="recherche" class="visually-hidden">Rechercher un film ou une série</label>
-            <input type="search" class="form-control form-control-sm" id="recherche" name="q" placeholder="Titre, genre..." minlength="2" required autocomplete="off">
+            <label for="search" class="visually-hidden">Rechercher un film</label>
+            <input type="search" class="form-control form-control-sm" id="search" name="q" placeholder="Titre du film..." autocomplete="off">
             <button type="submit" class="btn btn-sm btn-primary">Rechercher</button>
           </form>
 
@@ -109,6 +109,10 @@
         </div>
       </div>
     </section>
+
+    <div class="container-fluid px-3 px-lg-5">
+      <p id="aucun-resultat" class="message-recherche h5 mb-0" role="status"></p>
+    </div>
 
     <section class="rangee container-fluid px-3 px-lg-5 py-4" aria-labelledby="titre-tendances">
       <div class="d-flex align-items-center justify-content-between gap-3 mb-3">

@@ -416,6 +416,10 @@ a:focus-visible {
   display: none;
 }
 
+.message-recherche:not(:empty) {
+  padding-top: 1.5rem;
+}
+
 [data-bs-theme=dark] {
   --sf-bg: #141414;
   --sf-bg-rgb: 20, 20, 20;

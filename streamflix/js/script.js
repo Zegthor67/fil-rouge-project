@@ -45,6 +45,45 @@ cartesFilms.forEach((carte) => {
 });
 
 // ===================================
+// EXERCICE 4 : Recherche
+// ===================================
+
+const searchInput = document.querySelector('#search');
+const messageRecherche = document.querySelector('#aucun-resultat');
+
+searchInput.addEventListener('input', function () {
+  const searchTerm = this.value.trim().toLowerCase();
+  const articles = document.querySelectorAll('article');
+  let nbResultats = 0;
+
+  articles.forEach((article) => {
+    const title = article.querySelector('h3').textContent.toLowerCase();
+    // chaque article est dans une colonne (li), c'est elle qu'on cache pour ne pas laisser de trou
+    const colonne = article.parentElement;
+
+    if (title.includes(searchTerm)) {
+      colonne.style.display = '';
+      nbResultats++;
+    } else {
+      colonne.style.display = 'none';
+    }
+  });
+
+  // une section sans aucun film correspondant est cachée aussi
+  document.querySelectorAll('.rangee').forEach((section) => {
+    const filmsVisibles = [...section.querySelectorAll('.grille-films > li')].filter((li) => li.style.display !== 'none');
+    section.style.display = filmsVisibles.length > 0 ? '' : 'none';
+  });
+
+  messageRecherche.textContent = nbResultats === 0 ? 'Aucun résultat pour « ' + this.value.trim() + ' »' : '';
+});
+
+// la recherche se fait en direct, pas besoin d'envoyer le formulaire
+searchInput.closest('form').addEventListener('submit', (event) => {
+  event.preventDefault();
+});
+
+// ===================================
 // Bootstrap et thème
 // ===================================
 

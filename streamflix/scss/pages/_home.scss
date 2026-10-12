@@ -30,3 +30,8 @@
 .hidden {
   display: none;
 }
+
+// Exercice 4 : message quand la recherche ne donne rien
+.message-recherche:not(:empty) {
+  padding-top: $spacing-unit * 1.5;
+}
