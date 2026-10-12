@@ -35,3 +35,40 @@
 .message-recherche:not(:empty) {
   padding-top: $spacing-unit * 1.5;
 }
+
+// Exercice 5 : modal d'un film
+.modal-film {
+  display: none;
+  position: fixed;
+  // au-dessus du header (z-index 1030)
+  z-index: 1060;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  .modal-content {
+    // Bootstrap met la modal en flex, ce qui empêche le float de la croix
+    display: block;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+
+    @include respond-to('md') {
+      margin-top: 10%;
+    }
+  }
+
+  .close {
+    float: right;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    color: inherit;
+    @include focus-ring;
+  }
+}

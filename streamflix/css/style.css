@@ -420,6 +420,42 @@ a:focus-visible {
   padding-top: 1.5rem;
 }
 
+.modal-film {
+  display: none;
+  position: fixed;
+  z-index: 1060;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-film .modal-content {
+  display: block;
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+}
+@media (min-width: 768px) {
+  .modal-film .modal-content {
+    margin-top: 10%;
+  }
+}
+.modal-film .close {
+  float: right;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  color: inherit;
+}
+.modal-film .close:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
 [data-bs-theme=dark] {
   --sf-bg: #141414;
   --sf-bg-rgb: 20, 20, 20;

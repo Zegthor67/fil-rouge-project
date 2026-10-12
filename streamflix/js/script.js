@@ -34,8 +34,8 @@ const cartesFilms = document.querySelectorAll('.carte-film');
 
 cartesFilms.forEach((carte) => {
   carte.addEventListener('click', (event) => {
-    // on ne marque pas le film si on clique sur le lien "Voir le film"
-    if (event.target.closest('a')) {
+    // le bouton "Voir le film" ouvre la modal (exercice 5), il ne marque pas le film
+    if (event.target.closest('.btn-details')) {
       return;
     }
 
@@ -81,6 +81,77 @@ searchInput.addEventListener('input', function () {
 // la recherche se fait en direct, pas besoin d'envoyer le formulaire
 searchInput.closest('form').addEventListener('submit', (event) => {
   event.preventDefault();
+});
+
+// ===================================
+// EXERCICE 5 : Modal
+// ===================================
+
+const modal = document.querySelector('#modal');
+const modalBody = document.querySelector('#modal-body');
+const boutonFermer = modal.querySelector('.close');
+let boutonOrigine = null;
+
+function openModal(article) {
+  const title = article.querySelector('h3').textContent;
+
+  // on vide la modal puis on la remplit avec le titre et les infos du film cliqué
+  modalBody.innerHTML = '';
+
+  const titre = document.createElement('h2');
+  titre.id = 'modal-titre';
+  titre.classList.add('h3', 'mb-3');
+  titre.textContent = title;
+
+  modalBody.appendChild(titre);
+  modalBody.appendChild(article.querySelector('.infos-film').cloneNode(true));
+
+  modal.setAttribute('aria-labelledby', 'modal-titre');
+  modal.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+
+  boutonOrigine = document.activeElement;
+  boutonFermer.focus();
+}
+
+function closeModal() {
+  modal.style.display = 'none';
+  document.body.style.overflow = '';
+
+  if (boutonOrigine) {
+    boutonOrigine.focus();
+  }
+}
+
+document.querySelectorAll('.btn-details').forEach((bouton) => {
+  bouton.addEventListener('click', () => {
+    openModal(bouton.closest('article'));
+  });
+});
+
+boutonFermer.addEventListener('click', closeModal);
+
+// clic sur le fond noir autour de la modal
+modal.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    closeModal();
+  }
+});
+
+document.addEventListener('keydown', (event) => {
+  if (modal.style.display !== 'block') {
+    return;
+  }
+
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+
+  // la croix est le seul élément cliquable de la modal, on garde le focus dessus
+  if (event.key === 'Tab') {
+    event.preventDefault();
+    boutonFermer.focus();
+  }
 });
 
 // ===================================
