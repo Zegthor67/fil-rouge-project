@@ -1,52 +1,38 @@
-@use '../utils/variables' as *;
-@use '../utils/mixins' as *;
-
-.modal-content {
-  border: 1px solid var(--sf-border);
-  background-color: var(--sf-surface);
-}
-
 // exo 1
 .hidden {
   display: none;
 }
 
-// exo 4 - message si aucun film trouvé
+// exo 4
 .message-recherche:not(:empty) {
   padding-top: 1.5rem;
 }
 
-// exo 5 - modal
+// exo 5
 .modal-film {
   display: none;
   position: fixed;
-  z-index: 1060; // au dessus du header
-  top: 0;
+  z-index: 1060;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 
   .modal-content {
-    display: block; // bootstrap met du flex et du coup le float marche pas
-    width: 80%;
-    max-width: 500px;
+    display: block;
     margin: 15% auto;
     padding: 20px;
-
-    @include respond-to('md') {
-      margin-top: 10%;
-    }
+    width: 80%;
+    max-width: 500px;
   }
 }
 
-.modal-film .close {
+.close {
   float: right;
-  border: 0;
-  background: none;
-  color: inherit;
   font-size: 28px;
-  line-height: 1;
   cursor: pointer;
-  @include focus-ring;
+  background: none;
+  border: 0;
+  color: inherit;
 }

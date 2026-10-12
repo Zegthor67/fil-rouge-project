@@ -2,41 +2,25 @@
 @use '../utils/mixins' as *;
 
 .hero {
-  overflow: hidden;
-  min-height: $hero-min-height;
+  min-height: 420px;
   color: $text-light;
-  background-color: $primary-dark;
 
   @include respond-to('md') {
-    min-height: $hero-height;
+    min-height: 60vh;
   }
 }
 
 .hero-image {
   @include cover-parent;
   object-fit: cover;
-  object-position: center top;
 }
 
-// degradé pour que le texte se lise bien sur l'image
+// fond sombre pour lire le texte
 .hero-overlay {
   @include cover-parent;
-  @include overlay-gradient(to right, 0.9);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .hero-contenu {
   position: relative;
-  padding-top: 4rem;
-  z-index: 1;
-}
-
-.hero-etiquette {
-  font-size: $font-size-small;
-  letter-spacing: 0.15em;
-  color: $primary-red;
-}
-.hero-description { color: rgba($text-light, 0.9); }
-
-.hero .infos-film dt {
-  color: $text-muted;
 }

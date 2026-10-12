@@ -1,39 +1,4 @@
-@use '../utils/variables' as *;
-@use '../utils/mixins' as *;
-
-// header fixe en haut quand on scroll
-.entete {
-  position: sticky;
-  top: 0;
-  z-index: 1030;
-  border-bottom: 1px solid var(--sf-border);
-  background-color: var(--sf-bg);
-
-  .navbar {
-    padding: 12px 0;
-  }
-
-  .logo img {
-    width: auto;
-    height: 32px;
-    @include respond-to('lg') {
-      height: 40px;
-    }
-  }
-}
-
-// barre de recherche
-.entete .recherche .form-control {
-  color: var(--sf-text);
-  background-color: var(--sf-surface);
-  border-color: var(--sf-border);
-  // border-radius: 20px;
-
-  &::placeholder {
-    color: var(--sf-text-muted);
-  }
-
-  @include respond-to('lg') {
-    width: 200px;
-  }
+.logo img {
+  height: 40px;
+  width: auto;
 }

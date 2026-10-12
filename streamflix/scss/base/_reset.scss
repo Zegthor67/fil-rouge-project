@@ -1,32 +1,3 @@
-@use '../utils/variables' as *;
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: var(--sf-bg);
-}
-
 img {
   max-width: 100%;
-  height: auto;
-}
-
-main:focus {
-  outline: none;
-}
-
-// on coupe les animations si l'utilisateur les a désactivées sur son PC
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-  }
 }

@@ -1,54 +1,29 @@
 @use '../utils/variables' as *;
-@use '../utils/mixins' as *;
 
 .carte-film {
-  overflow: hidden;
-  --bs-card-bg: var(--sf-surface);
-  --bs-card-border-color: var(--sf-border);
-  transition: border-color $transition-speed;
-
-  &:hover {
-    border-color: $primary-red;
-  }
+  cursor: pointer;
 
   .card-img-top {
     aspect-ratio: 2 / 3;
     object-fit: cover;
-    background-color: $secondary-gray;
-  }
-  .card-title {
-    margin-bottom: 8px;
   }
 }
 
-// infos sous le titre (annee, note, duree...)
 .infos-film {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  gap: 4px 6px;
-  margin-bottom: 0;
+  gap: 4px 8px;
   font-size: $font-size-small;
 
-  dt {
-    color: var(--sf-text-muted);
-    font-weight: normal;
-  }
-
   dd {
-    margin: 0 10px 0 0;
-    font-weight: 600;
+    margin: 0 8px 0 0;
   }
 }
 
-// exo 3 - film vu
-.carte-film {
-  cursor: pointer;
-}
-
+// exo 3
 .watched {
-  position: relative;
   opacity: 0.6;
+  position: relative;
 }
 
 .watched::after {
@@ -56,10 +31,8 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  z-index: 1;
-  padding: 5px 10px;
-  font-weight: 700;
-  color: white;
   background: green;
+  color: white;
+  padding: 5px 10px;
   border-radius: 4px;
 }

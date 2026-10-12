@@ -1,34 +1,3 @@
-@use '../utils/variables' as *;
-@use '../utils/mixins' as *;
-
-.navbar-nav .nav-link {
-  transition: color $transition-speed ease;
-  color: var(--sf-text-muted);
-  @include focus-ring;
-
-  &:hover, &:focus-visible {
-    color: var(--sf-text);
-  }
-}
-
 .navbar-nav .nav-link.active {
   font-weight: bold;
-  color: var(--sf-text);
-}
-
-.navbar-toggler {
-  border-color: var(--sf-border);
-  @include focus-ring;
-  &:focus {
-    box-shadow: none;
-  }
-}
-
-// menu du profil
-.profil .dropdown-menu {
-  --bs-dropdown-bg: var(--sf-surface);
-  --bs-dropdown-border-color: var(--sf-border);
-  --bs-dropdown-link-color: var(--sf-text);
-  --bs-dropdown-link-hover-bg: #{$primary-red};
-  --bs-dropdown-link-active-bg: #{$primary-red};
 }

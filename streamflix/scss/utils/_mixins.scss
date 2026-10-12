@@ -1,37 +1,17 @@
 @use 'sass:map';
 @use 'variables' as *;
 
-// media query mobile first : @include respond-to('md') { ... }
 @mixin respond-to($breakpoint) {
   @media (min-width: map.get($breakpoints, $breakpoint)) {
     @content;
   }
 }
 
-@mixin overlay-gradient($direction: to top, $opacity: 0.9) {
-  background: linear-gradient(
-    $direction,
-    rgba($background-dark, $opacity) 0%,
-    rgba($background-dark, $opacity * 0.5) 50%,
-    rgba($background-dark, 0) 100%
-  );
-}
-
-@mixin focus-ring($color: $text-light) {
-  &:focus-visible {
-    outline: 3px solid $color;
-    outline-offset: 3px;
-  }
-}
-
+// prend toute la place du parent
 @mixin cover-parent {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-}
-
-@mixin theme-transition {
-  transition: background-color $transition-speed ease, color $transition-speed ease,
-    border-color $transition-speed ease;
 }
