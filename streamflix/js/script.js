@@ -155,7 +155,33 @@ document.addEventListener('keydown', (event) => {
 });
 
 // ===================================
-// Bootstrap et thème
+// EXERCICE 6 : Thème sombre / clair (bonus)
+// ===================================
+
+const boutonTheme = document.querySelector('#bouton-theme');
+
+// le thème a déjà été choisi dans le <head> pour éviter un flash au chargement,
+// ici on met juste la classe du body et le texte du bouton à jour
+if (document.documentElement.getAttribute('data-bs-theme') === 'dark') {
+  document.body.classList.add('dark-theme');
+}
+boutonTheme.textContent = document.body.classList.contains('dark-theme') ? 'Mode clair' : 'Mode sombre';
+
+boutonTheme.addEventListener('click', () => {
+  const sombre = document.body.classList.toggle('dark-theme');
+  const theme = sombre ? 'dark' : 'light';
+
+  // Bootstrap et nos variables SCSS se basent sur data-bs-theme
+  document.documentElement.setAttribute('data-bs-theme', theme);
+  boutonTheme.textContent = sombre ? 'Mode clair' : 'Mode sombre';
+
+  try {
+    localStorage.setItem('theme', theme);
+  } catch (e) {}
+});
+
+// ===================================
+// Bootstrap (tooltip et bouton Ma Liste)
 // ===================================
 
 document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((el) => {
@@ -169,17 +195,3 @@ document.querySelectorAll('.btn-ma-liste').forEach((bouton) => {
     bouton.textContent = ajoute ? 'Ma Liste' : 'Dans ma liste';
   });
 });
-
-const switchTheme = document.getElementById('switch-theme');
-
-if (switchTheme) {
-  switchTheme.checked = document.documentElement.getAttribute('data-bs-theme') === 'light';
-
-  switchTheme.addEventListener('change', () => {
-    const theme = switchTheme.checked ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-bs-theme', theme);
-    try {
-      localStorage.setItem('theme', theme);
-    } catch (e) {}
-  });
-}
