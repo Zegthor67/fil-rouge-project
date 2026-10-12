@@ -41,3 +41,26 @@
     font-weight: 600;
   }
 }
+
+// Exercice 3 : film marqué comme vu
+.carte-film {
+  cursor: pointer;
+}
+
+.watched {
+  opacity: 0.6;
+  position: relative;
+
+  &::after {
+    content: '✓ Vu';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    background: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 700;
+  }
+}

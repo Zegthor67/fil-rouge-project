@@ -27,6 +27,24 @@ compteur.textContent = 'Catalogue : ' + nombreFilms + ' films disponibles';
 document.querySelector('.pied-de-page .container-fluid').appendChild(compteur);
 
 // ===================================
+// EXERCICE 3 : Films vus
+// ===================================
+
+const cartesFilms = document.querySelectorAll('.carte-film');
+
+cartesFilms.forEach((carte) => {
+  carte.addEventListener('click', (event) => {
+    // on ne marque pas le film si on clique sur le lien "Voir le film"
+    if (event.target.closest('a')) {
+      return;
+    }
+
+    const estVu = carte.classList.toggle('watched');
+    carte.querySelector('.btn-vu').setAttribute('aria-pressed', String(estVu));
+  });
+});
+
+// ===================================
 // Bootstrap et thème
 // ===================================
 

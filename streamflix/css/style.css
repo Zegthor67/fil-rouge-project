@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --bs-primary: #e50914;
   --bs-primary-rgb: 229, 9, 20;
@@ -317,6 +318,27 @@ a:focus-visible {
 .infos-film dd {
   margin: 0 0.6rem 0 0;
   font-weight: 600;
+}
+
+.carte-film {
+  cursor: pointer;
+}
+
+.watched {
+  opacity: 0.6;
+  position: relative;
+}
+.watched::after {
+  content: "✓ Vu";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  background: green;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 700;
 }
 
 .navbar-nav .nav-link {
