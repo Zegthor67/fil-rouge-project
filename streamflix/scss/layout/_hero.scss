@@ -18,6 +18,7 @@
   object-position: center top;
 }
 
+// dégradé noir pour que le texte reste lisible sur l'image
 .hero-overlay {
   @include cover-parent;
   @include overlay-gradient(to top, 1);
@@ -32,7 +33,11 @@
 .hero-contenu {
   position: relative;
   z-index: 1;
-  padding-top: $spacing-unit * 6;
+  padding-top: 6rem;
+
+  h2 {
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+  }
 }
 
 .hero-etiquette {

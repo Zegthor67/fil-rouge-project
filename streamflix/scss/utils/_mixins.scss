@@ -1,16 +1,14 @@
 @use 'sass:map';
 @use 'variables' as *;
 
+// media query mobile first : @include respond-to('md') { ... }
 @mixin respond-to($breakpoint) {
-  @if map.has-key($breakpoints, $breakpoint) {
-    @media (min-width: map.get($breakpoints, $breakpoint)) {
-      @content;
-    }
-  } @else {
-    @error "Le point de rupture `#{$breakpoint}` n'existe pas.";
+  @media (min-width: map.get($breakpoints, $breakpoint)) {
+    @content;
   }
 }
 
+// la carte monte un peu au survol
 @mixin hover-lift($distance: -6px) {
   transition: transform $transition-speed ease, box-shadow $transition-speed ease,
     background-color $transition-speed ease, color $transition-speed ease;

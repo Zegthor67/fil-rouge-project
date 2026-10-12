@@ -64,7 +64,6 @@ html {
 
 body {
   background-color: var(--sf-bg);
-  -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -94,27 +93,17 @@ body {
   line-height: 1.5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-  line-height: 1.2;
-}
-
 small,
 .form-text {
   font-size: 14px;
 }
 
 .lead {
-  font-size: 17.6px;
+  font-size: 1.1rem;
 }
 @media (min-width: 992px) {
   .lead {
-    font-size: 19.2px;
+    font-size: 1.25rem;
   }
 }
 
@@ -131,7 +120,7 @@ a:focus-visible {
   top: 1rem;
   left: 1rem;
   z-index: 2000;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   background-color: #ffffff;
   color: #221f1f;
   font-family: "Arial", sans-serif;
@@ -148,8 +137,7 @@ a:focus-visible {
   border-bottom: 1px solid var(--sf-border);
 }
 .entete .navbar {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding: 12px 0;
 }
 .entete .logo img {
   height: 32px;
@@ -215,6 +203,9 @@ a:focus-visible {
   position: relative;
   z-index: 1;
   padding-top: 6rem;
+}
+.hero-contenu h2 {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
 }
 
 .hero-etiquette {
@@ -300,14 +291,18 @@ a:focus-visible {
   transform: scale(1.03);
 }
 .carte-film .card-title {
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
+  transition: color 0.3s;
+}
+.carte-film:hover .card-title {
+  color: #e50914;
 }
 
 .infos-film {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.25rem 0.4rem;
+  gap: 4px 6px;
   margin-bottom: 0;
   font-size: 14px;
 }
@@ -316,7 +311,7 @@ a:focus-visible {
   color: var(--sf-text-muted);
 }
 .infos-film dd {
-  margin: 0 0.6rem 0 0;
+  margin: 0 10px 0 0;
   font-weight: 600;
 }
 
@@ -389,18 +384,28 @@ a:focus-visible {
 }
 
 .rangee h2 {
-  padding-left: 0.75rem;
-  border-left: 4px solid #e50914;
+  position: relative;
+  padding-bottom: 8px;
+}
+.rangee h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #e50914;
 }
 
 .inscription > .row > div {
-  padding: 1.5rem;
+  padding: 24px;
   background-color: var(--sf-surface);
   border-radius: 12px;
 }
 @media (min-width: 768px) {
   .inscription > .row > div {
-    padding: 2.5rem;
+    padding: 40px;
   }
 }
 .inscription legend {
@@ -417,7 +422,7 @@ a:focus-visible {
 }
 
 .message-recherche:not(:empty) {
-  padding-top: 1.5rem;
+  padding-top: 24px;
 }
 
 .modal-film {

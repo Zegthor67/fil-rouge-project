@@ -19,7 +19,12 @@
   }
 
   .card-title {
-    margin-bottom: $spacing-unit * 0.5;
+    margin-bottom: 8px;
+    transition: color $transition-speed;
+  }
+
+  &:hover .card-title {
+    color: $primary-red;
   }
 }
 
@@ -27,7 +32,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: $spacing-unit * 0.25 $spacing-unit * 0.4;
+  gap: 4px 6px;
   margin-bottom: 0;
   font-size: $font-size-small;
 
@@ -37,12 +42,12 @@
   }
 
   dd {
-    margin: 0 $spacing-unit * 0.6 0 0;
+    margin: 0 10px 0 0;
     font-weight: 600;
   }
 }
 
-// Exercice 3 : film marqué comme vu
+// Exercice 3 : film vu
 .carte-film {
   cursor: pointer;
 }

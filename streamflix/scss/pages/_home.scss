@@ -1,19 +1,31 @@
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 
+// petite barre rouge sous les titres de section
 .rangee h2 {
-  padding-left: $spacing-unit * 0.75;
-  border-left: 4px solid $primary-red;
+  position: relative;
+  padding-bottom: 8px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: $primary-red;
+  }
 }
 
 .inscription {
   > .row > div {
-    padding: $spacing-unit * 1.5;
+    padding: 24px;
     background-color: var(--sf-surface);
-    border-radius: $border-radius * 2;
+    border-radius: 12px;
 
     @include respond-to('md') {
-      padding: $spacing-unit * 2.5;
+      padding: 40px;
     }
   }
 
@@ -31,12 +43,12 @@
   display: none;
 }
 
-// Exercice 4 : message quand la recherche ne donne rien
+// Exercice 4 : message aucun résultat
 .message-recherche:not(:empty) {
-  padding-top: $spacing-unit * 1.5;
+  padding-top: 24px;
 }
 
-// Exercice 5 : modal d'un film
+// Exercice 5 : modal
 .modal-film {
   display: none;
   position: fixed;
@@ -49,7 +61,7 @@
   background-color: rgba(0, 0, 0, 0.8);
 
   .modal-content {
-    // Bootstrap met la modal en flex, ce qui empêche le float de la croix
+    // sinon le float de la croix ne marche pas (Bootstrap met du flex)
     display: block;
     margin: 15% auto;
     padding: 20px;

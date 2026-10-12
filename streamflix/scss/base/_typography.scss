@@ -8,26 +8,16 @@ body {
   line-height: 1.5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-  line-height: 1.2;
-}
-
 small,
 .form-text {
   font-size: $font-size-small;
 }
 
 .lead {
-  font-size: $font-size-base * 1.1;
+  font-size: 1.1rem;
 
   @include respond-to('lg') {
-    font-size: $font-size-large * 0.8;
+    font-size: 1.25rem;
   }
 }
 
@@ -38,10 +28,10 @@ a {
 
 .lien-evitement:focus {
   position: fixed;
-  top: $spacing-unit;
-  left: $spacing-unit;
+  top: 1rem;
+  left: 1rem;
   z-index: 2000;
-  padding: $spacing-unit * 0.5 $spacing-unit;
+  padding: 8px 16px;
   background-color: $text-light;
   color: $primary-dark;
   font-family: $font-secondary;

@@ -17,6 +17,7 @@
     font-weight: 700;
   }
 
+  // trait rouge sous le lien actif (seulement sur grand écran)
   @include respond-to('lg') {
     &.active::after {
       content: '';

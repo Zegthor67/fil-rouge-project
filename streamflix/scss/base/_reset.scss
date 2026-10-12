@@ -6,7 +6,6 @@ html {
 
 body {
   background-color: var(--sf-bg);
-  -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -18,6 +17,7 @@ main:focus {
   outline: none;
 }
 
+// on coupe les animations si l'utilisateur les a désactivées sur son PC
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
