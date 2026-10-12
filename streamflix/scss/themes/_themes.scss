@@ -38,3 +38,9 @@ body,
 .dropdown-menu {
   @include theme-transition;
 }
+
+// Exercice 6 : classe ajoutée sur le body en mode sombre
+.dark-theme {
+  background-color: $background-dark;
+  color: $text-light;
+}

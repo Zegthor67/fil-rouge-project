@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --bs-primary: #e50914;
   --bs-primary-rgb: 229, 9, 20;
@@ -199,7 +200,7 @@ a:focus-visible {
   inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, #141414 0%, rgba(20, 20, 20, 0.5) 50%, rgba(20, 20, 20, 0) 100%);
+  background: linear-gradient(to top, #1a1a1a 0%, rgba(26, 26, 26, 0.5) 50%, rgba(26, 26, 26, 0) 100%);
 }
 .hero-overlay::after {
   content: "";
@@ -207,7 +208,7 @@ a:focus-visible {
   inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(20, 20, 20, 0.8) 0%, rgba(20, 20, 20, 0.4) 50%, rgba(20, 20, 20, 0) 100%);
+  background: linear-gradient(to right, rgba(26, 26, 26, 0.8) 0%, rgba(26, 26, 26, 0.4) 50%, rgba(26, 26, 26, 0) 100%);
 }
 
 .hero-contenu {
@@ -319,6 +320,27 @@ a:focus-visible {
   font-weight: 600;
 }
 
+.carte-film {
+  cursor: pointer;
+}
+
+.watched {
+  opacity: 0.6;
+  position: relative;
+}
+.watched::after {
+  content: "✓ Vu";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  background: green;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
 .navbar-nav .nav-link {
   position: relative;
   color: var(--sf-text-muted);
@@ -394,9 +416,49 @@ a:focus-visible {
   display: none;
 }
 
+.message-recherche:not(:empty) {
+  padding-top: 1.5rem;
+}
+
+.modal-film {
+  display: none;
+  position: fixed;
+  z-index: 1060;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-film .modal-content {
+  display: block;
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+}
+@media (min-width: 768px) {
+  .modal-film .modal-content {
+    margin-top: 10%;
+  }
+}
+.modal-film .close {
+  float: right;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  color: inherit;
+}
+.modal-film .close:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
 [data-bs-theme=dark] {
-  --sf-bg: #141414;
-  --sf-bg-rgb: 20, 20, 20;
+  --sf-bg: #1a1a1a;
+  --sf-bg-rgb: 26, 26, 26;
   --sf-surface: #221f1f;
   --sf-text: #ffffff;
   --sf-text-muted: #999999;
@@ -439,6 +501,11 @@ body,
 .modal-content,
 .dropdown-menu {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.dark-theme {
+  background-color: #1a1a1a;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */

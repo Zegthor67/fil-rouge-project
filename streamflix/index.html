@@ -51,14 +51,11 @@
             <li class="nav-item"><a class="nav-link" href="ma-liste.html">Ma Liste</a></li>
           </ul>
 
-          <div class="form-check form-switch mb-3 mb-lg-0 me-lg-3">
-            <input class="form-check-input" type="checkbox" role="switch" id="switch-theme">
-            <label class="form-check-label" for="switch-theme">Mode clair</label>
-          </div>
+          <button type="button" id="bouton-theme" class="btn btn-sm btn-outline-secondary mb-3 mb-lg-0 me-lg-3">Mode clair</button>
 
           <form class="recherche d-flex gap-2 mb-3 mb-lg-0 me-lg-3" role="search" action="recherche.html" method="get">
-            <label for="recherche" class="visually-hidden">Rechercher un film ou une série</label>
-            <input type="search" class="form-control form-control-sm" id="recherche" name="q" placeholder="Titre, genre..." minlength="2" required autocomplete="off">
+            <label for="search" class="visually-hidden">Rechercher un film</label>
+            <input type="search" class="form-control form-control-sm" id="search" name="q" placeholder="Titre du film..." autocomplete="off">
             <button type="submit" class="btn btn-sm btn-primary">Rechercher</button>
           </form>
 
@@ -110,6 +107,10 @@
       </div>
     </section>
 
+    <div class="container-fluid px-3 px-lg-5">
+      <p id="aucun-resultat" class="message-recherche h5 mb-0" role="status"></p>
+    </div>
+
     <section class="rangee container-fluid px-3 px-lg-5 py-4" aria-labelledby="titre-tendances">
       <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
         <h2 id="titre-tendances" class="h3 mb-0">Tendances actuelles</h2>
@@ -132,8 +133,9 @@
                 <dd><span class="badge text-bg-secondary">Action</span> <span class="badge text-bg-secondary">Crime</span> <span class="badge text-bg-secondary">Drama</span></dd>
               </dl>
             </div>
-            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
-              <a href="films/dark-knight.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> The Dark Knight</span></a>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3 d-flex gap-2">
+              <button type="button" class="btn btn-primary btn-sm btn-details">Voir le film<span class="visually-hidden"> The Dark Knight</span></button>
+              <button type="button" class="btn btn-outline-secondary btn-sm btn-vu" aria-pressed="false">Déjà vu<span class="visually-hidden"> : The Dark Knight</span></button>
             </div>
           </article>
         </li>
@@ -153,8 +155,9 @@
                 <dd><span class="badge text-bg-secondary">Sci-Fi</span> <span class="badge text-bg-secondary">Drama</span></dd>
               </dl>
             </div>
-            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
-              <a href="films/interstellar.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> Interstellar</span></a>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3 d-flex gap-2">
+              <button type="button" class="btn btn-primary btn-sm btn-details">Voir le film<span class="visually-hidden"> Interstellar</span></button>
+              <button type="button" class="btn btn-outline-secondary btn-sm btn-vu" aria-pressed="false">Déjà vu<span class="visually-hidden"> : Interstellar</span></button>
             </div>
           </article>
         </li>
@@ -174,8 +177,9 @@
                 <dd><span class="badge text-bg-secondary">Crime</span> <span class="badge text-bg-secondary">Drama</span></dd>
               </dl>
             </div>
-            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
-              <a href="films/pulp-fiction.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> Pulp Fiction</span></a>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3 d-flex gap-2">
+              <button type="button" class="btn btn-primary btn-sm btn-details">Voir le film<span class="visually-hidden"> Pulp Fiction</span></button>
+              <button type="button" class="btn btn-outline-secondary btn-sm btn-vu" aria-pressed="false">Déjà vu<span class="visually-hidden"> : Pulp Fiction</span></button>
             </div>
           </article>
         </li>
@@ -204,8 +208,9 @@
                 <dd><span class="badge text-bg-secondary">Sci-Fi</span> <span class="badge text-bg-secondary">Thriller</span></dd>
               </dl>
             </div>
-            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
-              <a href="films/inception.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> Inception</span></a>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3 d-flex gap-2">
+              <button type="button" class="btn btn-primary btn-sm btn-details">Voir le film<span class="visually-hidden"> Inception</span></button>
+              <button type="button" class="btn btn-outline-secondary btn-sm btn-vu" aria-pressed="false">Déjà vu<span class="visually-hidden"> : Inception</span></button>
             </div>
           </article>
         </li>
@@ -225,8 +230,9 @@
                 <dd><span class="badge text-bg-secondary">Action</span> <span class="badge text-bg-secondary">Sci-Fi</span></dd>
               </dl>
             </div>
-            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
-              <a href="films/matrix.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> The Matrix</span></a>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3 d-flex gap-2">
+              <button type="button" class="btn btn-primary btn-sm btn-details">Voir le film<span class="visually-hidden"> The Matrix</span></button>
+              <button type="button" class="btn btn-outline-secondary btn-sm btn-vu" aria-pressed="false">Déjà vu<span class="visually-hidden"> : The Matrix</span></button>
             </div>
           </article>
         </li>
@@ -246,8 +252,9 @@
                 <dd><span class="badge text-bg-secondary">Drama</span> <span class="badge text-bg-secondary">Romance</span></dd>
               </dl>
             </div>
-            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
-              <a href="films/forrest-gump.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> Forrest Gump</span></a>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3 d-flex gap-2">
+              <button type="button" class="btn btn-primary btn-sm btn-details">Voir le film<span class="visually-hidden"> Forrest Gump</span></button>
+              <button type="button" class="btn btn-outline-secondary btn-sm btn-vu" aria-pressed="false">Déjà vu<span class="visually-hidden"> : Forrest Gump</span></button>
             </div>
           </article>
         </li>
@@ -276,8 +283,9 @@
                 <dd><span class="badge text-bg-secondary">Sci-Fi</span> <span class="badge text-bg-secondary">Drama</span></dd>
               </dl>
             </div>
-            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
-              <a href="films/interstellar.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> Interstellar</span></a>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3 d-flex gap-2">
+              <button type="button" class="btn btn-primary btn-sm btn-details">Voir le film<span class="visually-hidden"> Interstellar</span></button>
+              <button type="button" class="btn btn-outline-secondary btn-sm btn-vu" aria-pressed="false">Déjà vu<span class="visually-hidden"> : Interstellar</span></button>
             </div>
           </article>
         </li>
@@ -297,8 +305,9 @@
                 <dd><span class="badge text-bg-secondary">Action</span> <span class="badge text-bg-secondary">Crime</span> <span class="badge text-bg-secondary">Drama</span></dd>
               </dl>
             </div>
-            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
-              <a href="films/dark-knight.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> The Dark Knight</span></a>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3 d-flex gap-2">
+              <button type="button" class="btn btn-primary btn-sm btn-details">Voir le film<span class="visually-hidden"> The Dark Knight</span></button>
+              <button type="button" class="btn btn-outline-secondary btn-sm btn-vu" aria-pressed="false">Déjà vu<span class="visually-hidden"> : The Dark Knight</span></button>
             </div>
           </article>
         </li>
@@ -318,8 +327,9 @@
                 <dd><span class="badge text-bg-secondary">Sci-Fi</span> <span class="badge text-bg-secondary">Thriller</span></dd>
               </dl>
             </div>
-            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
-              <a href="films/inception.html" class="btn btn-primary btn-sm">Voir le film<span class="visually-hidden"> Inception</span></a>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3 d-flex gap-2">
+              <button type="button" class="btn btn-primary btn-sm btn-details">Voir le film<span class="visually-hidden"> Inception</span></button>
+              <button type="button" class="btn btn-outline-secondary btn-sm btn-vu" aria-pressed="false">Déjà vu<span class="visually-hidden"> : Inception</span></button>
             </div>
           </article>
         </li>
@@ -431,6 +441,13 @@
       <p class="copyright text-center text-body-secondary border-top pt-4 mt-4 mb-0"><small>&copy; 2026 StreamFlix. Tous droits réservés.</small></p>
     </div>
   </footer>
+
+  <div id="modal" class="modal modal-film" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button type="button" class="close" aria-label="Fermer">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
 
   <div class="modal fade" id="modal-inception" tabindex="-1" role="dialog" aria-labelledby="modal-inception-titre">
     <div class="modal-dialog modal-dialog-centered modal-lg">
