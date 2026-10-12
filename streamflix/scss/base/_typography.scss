@@ -2,20 +2,18 @@
 @use '../utils/mixins' as *;
 
 body {
+  line-height: 1.5;
   font-family: $font-primary;
   font-size: $font-size-base;
   color: var(--sf-text);
-  line-height: 1.5;
 }
 
-small,
-.form-text {
+small, .form-text {
   font-size: $font-size-small;
 }
 
 .lead {
   font-size: 1.1rem;
-
   @include respond-to('lg') {
     font-size: 1.25rem;
   }
@@ -26,15 +24,16 @@ a {
   @include focus-ring;
 }
 
+// lien "aller au contenu" visible au clavier
 .lien-evitement:focus {
   position: fixed;
-  top: 1rem;
-  left: 1rem;
   z-index: 2000;
+  top: 16px;
+  left: 16px;
   padding: 8px 16px;
-  background-color: $text-light;
-  color: $primary-dark;
   font-family: $font-secondary;
   font-weight: 700;
+  color: $primary-dark;
+  background-color: #FFFFFF;
   border-radius: $border-radius;
 }

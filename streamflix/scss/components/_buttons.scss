@@ -1,17 +1,18 @@
-@use '../utils/variables' as *;
-@use '../utils/mixins' as *;
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 .btn {
   font-weight: 600;
   @include focus-ring;
 }
 
-.btn-ma-liste[aria-pressed='true'] {
-  background-color: $text-light;
+// bouton ma liste quand le film est ajouté
+.btn-ma-liste[aria-pressed="true"] {
   color: $primary-dark;
+  background-color: #fff;
 }
 
 .badge {
+  letter-spacing: .02em;
   font-weight: 500;
-  letter-spacing: 0.02em;
 }

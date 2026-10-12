@@ -87,14 +87,13 @@ main:focus {
   }
 }
 body {
+  line-height: 1.5;
   font-family: "Netflix Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
   color: var(--sf-text);
-  line-height: 1.5;
 }
 
-small,
-.form-text {
+small, .form-text {
   font-size: 14px;
 }
 
@@ -117,14 +116,14 @@ a:focus-visible {
 
 .lien-evitement:focus {
   position: fixed;
-  top: 1rem;
-  left: 1rem;
   z-index: 2000;
+  top: 16px;
+  left: 16px;
   padding: 8px 16px;
-  background-color: #ffffff;
-  color: #221f1f;
   font-family: "Arial", sans-serif;
   font-weight: 700;
+  color: #221f1f;
+  background-color: #FFFFFF;
   border-radius: 6px;
 }
 
@@ -132,25 +131,26 @@ a:focus-visible {
   position: sticky;
   top: 0;
   z-index: 1030;
-  background-color: var(--sf-bg);
   border-bottom: 1px solid var(--sf-border);
+  background-color: var(--sf-bg);
 }
 .entete .navbar {
   padding: 12px 0;
 }
 .entete .logo img {
-  height: 32px;
   width: auto;
+  height: 32px;
 }
 @media (min-width: 992px) {
   .entete .logo img {
     height: 40px;
   }
 }
+
 .entete .recherche .form-control {
+  color: var(--sf-text);
   background-color: var(--sf-surface);
   border-color: var(--sf-border);
-  color: var(--sf-text);
 }
 .entete .recherche .form-control::placeholder {
   color: var(--sf-text-muted);
@@ -162,10 +162,10 @@ a:focus-visible {
 }
 
 .hero {
-  min-height: 420px;
   overflow: hidden;
-  background-color: #221f1f;
+  min-height: 420px;
   color: #ffffff;
+  background-color: #221f1f;
 }
 @media (min-width: 768px) {
   .hero {
@@ -192,14 +192,14 @@ a:focus-visible {
 
 .hero-contenu {
   position: relative;
-  z-index: 1;
   padding-top: 4rem;
+  z-index: 1;
 }
 
 .hero-etiquette {
-  color: #e50914;
-  letter-spacing: 0.15em;
   font-size: 14px;
+  letter-spacing: 0.15em;
+  color: #e50914;
 }
 
 .hero-description {
@@ -211,25 +211,28 @@ a:focus-visible {
 }
 
 .pied-de-page {
-  background-color: var(--sf-surface);
-  color: var(--sf-text-muted);
   font-size: 14px;
+  color: var(--sf-text-muted);
+  background-color: var(--sf-surface);
 }
 .pied-de-page h2 {
-  color: var(--sf-text);
   letter-spacing: 0.08em;
+  color: var(--sf-text);
 }
+.pied-de-page address {
+  line-height: 1.8;
+  font-style: normal;
+}
+
 .pied-de-page a {
   color: var(--sf-text-muted);
   text-decoration: none;
 }
-.pied-de-page a:hover, .pied-de-page a:focus-visible {
-  color: var(--sf-text);
+
+.pied-de-page a:hover,
+.pied-de-page a:focus-visible {
   text-decoration: underline;
-}
-.pied-de-page address {
-  font-style: normal;
-  line-height: 1.8;
+  color: var(--sf-text);
 }
 
 .btn {
@@ -241,19 +244,19 @@ a:focus-visible {
 }
 
 .btn-ma-liste[aria-pressed=true] {
-  background-color: #ffffff;
   color: #221f1f;
+  background-color: #fff;
 }
 
 .badge {
-  font-weight: 500;
   letter-spacing: 0.02em;
+  font-weight: 500;
 }
 
 .carte-film {
+  overflow: hidden;
   --bs-card-bg: var(--sf-surface);
   --bs-card-border-color: var(--sf-border);
-  overflow: hidden;
   transition: border-color 0.3s;
 }
 .carte-film:hover {
@@ -277,8 +280,8 @@ a:focus-visible {
   font-size: 14px;
 }
 .infos-film dt {
-  font-weight: 400;
   color: var(--sf-text-muted);
+  font-weight: normal;
 }
 .infos-film dd {
   margin: 0 10px 0 0;
@@ -290,25 +293,26 @@ a:focus-visible {
 }
 
 .watched {
-  opacity: 0.6;
   position: relative;
+  opacity: 0.6;
 }
+
 .watched::after {
   content: "✓ Vu";
   position: absolute;
   top: 10px;
   right: 10px;
   z-index: 1;
-  background: green;
-  color: white;
   padding: 5px 10px;
-  border-radius: 4px;
   font-weight: 700;
+  color: white;
+  background: green;
+  border-radius: 4px;
 }
 
 .navbar-nav .nav-link {
-  color: var(--sf-text-muted);
   transition: color 0.3s ease;
+  color: var(--sf-text-muted);
 }
 .navbar-nav .nav-link:focus-visible {
   outline: 3px solid #ffffff;
@@ -317,9 +321,10 @@ a:focus-visible {
 .navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus-visible {
   color: var(--sf-text);
 }
+
 .navbar-nav .nav-link.active {
+  font-weight: bold;
   color: var(--sf-text);
-  font-weight: 700;
 }
 
 .navbar-toggler {
@@ -335,15 +340,15 @@ a:focus-visible {
 
 .profil .dropdown-menu {
   --bs-dropdown-bg: var(--sf-surface);
+  --bs-dropdown-border-color: var(--sf-border);
   --bs-dropdown-link-color: var(--sf-text);
   --bs-dropdown-link-hover-bg: #e50914;
   --bs-dropdown-link-active-bg: #e50914;
-  --bs-dropdown-border-color: var(--sf-border);
 }
 
 .modal-content {
-  background-color: var(--sf-surface);
   border: 1px solid var(--sf-border);
+  background-color: var(--sf-surface);
 }
 
 .hidden {
@@ -351,39 +356,40 @@ a:focus-visible {
 }
 
 .message-recherche:not(:empty) {
-  padding-top: 24px;
+  padding-top: 1.5rem;
 }
 
 .modal-film {
   display: none;
   position: fixed;
   z-index: 1060;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
 }
 .modal-film .modal-content {
   display: block;
-  margin: 15% auto;
-  padding: 20px;
   width: 80%;
   max-width: 500px;
+  margin: 15% auto;
+  padding: 20px;
 }
 @media (min-width: 768px) {
   .modal-film .modal-content {
     margin-top: 10%;
   }
 }
+
 .modal-film .close {
   float: right;
+  border: 0;
+  background: none;
+  color: inherit;
   font-size: 28px;
   line-height: 1;
   cursor: pointer;
-  background: none;
-  border: 0;
-  color: inherit;
 }
 .modal-film .close:focus-visible {
   outline: 3px solid #ffffff;

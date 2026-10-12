@@ -2,9 +2,9 @@
 @use '../utils/mixins' as *;
 
 .carte-film {
+  overflow: hidden;
   --bs-card-bg: var(--sf-surface);
   --bs-card-border-color: var(--sf-border);
-  overflow: hidden;
   transition: border-color $transition-speed;
 
   &:hover {
@@ -16,12 +16,12 @@
     object-fit: cover;
     background-color: $secondary-gray;
   }
-
   .card-title {
     margin-bottom: 8px;
   }
 }
 
+// infos sous le titre (annee, note, duree...)
 .infos-film {
   display: flex;
   flex-wrap: wrap;
@@ -31,8 +31,8 @@
   font-size: $font-size-small;
 
   dt {
-    font-weight: 400;
     color: var(--sf-text-muted);
+    font-weight: normal;
   }
 
   dd {
@@ -41,25 +41,25 @@
   }
 }
 
-// Exercice 3 : film vu
+// exo 3 - film vu
 .carte-film {
   cursor: pointer;
 }
 
 .watched {
-  opacity: 0.6;
   position: relative;
+  opacity: 0.6;
+}
 
-  &::after {
-    content: '✓ Vu';
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 1;
-    background: green;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-weight: 700;
-  }
+.watched::after {
+  content: "✓ Vu";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  padding: 5px 10px;
+  font-weight: 700;
+  color: white;
+  background: green;
+  border-radius: 4px;
 }

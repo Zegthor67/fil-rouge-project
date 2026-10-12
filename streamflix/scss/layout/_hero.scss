@@ -2,10 +2,10 @@
 @use '../utils/mixins' as *;
 
 .hero {
-  min-height: $hero-min-height;
   overflow: hidden;
-  background-color: $primary-dark;
+  min-height: $hero-min-height;
   color: $text-light;
+  background-color: $primary-dark;
 
   @include respond-to('md') {
     min-height: $hero-height;
@@ -18,7 +18,7 @@
   object-position: center top;
 }
 
-// dégradé noir pour que le texte reste lisible sur l'image
+// degradé pour que le texte se lise bien sur l'image
 .hero-overlay {
   @include cover-parent;
   @include overlay-gradient(to right, 0.9);
@@ -26,19 +26,16 @@
 
 .hero-contenu {
   position: relative;
-  z-index: 1;
   padding-top: 4rem;
+  z-index: 1;
 }
 
 .hero-etiquette {
-  color: $primary-red;
-  letter-spacing: 0.15em;
   font-size: $font-size-small;
+  letter-spacing: 0.15em;
+  color: $primary-red;
 }
-
-.hero-description {
-  color: rgba($text-light, 0.9);
-}
+.hero-description { color: rgba($text-light, 0.9); }
 
 .hero .infos-film dt {
   color: $text-muted;
