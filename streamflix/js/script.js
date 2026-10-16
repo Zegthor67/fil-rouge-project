@@ -34,7 +34,12 @@ cartesFilms.forEach((carte) => {
     }
 
     const estVu = carte.classList.toggle('watched');
-    carte.querySelector('.btn-vu').setAttribute('aria-pressed', String(estVu));
+    const boutonVu = carte.querySelector('.btn-vu');
+
+    // le bouton change de texte et reste enfoncé
+    boutonVu.setAttribute('aria-pressed', String(estVu));
+    boutonVu.classList.toggle('active', estVu);
+    boutonVu.firstChild.textContent = estVu ? '✓ Vu' : 'Déjà vu';
   });
 });
 
